@@ -1,0 +1,3087 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>YH | Yield Hacker Pass Public Mint</title>
+    <meta name="author" content="Yield Hacker Pass - Caio Vicentino">
+    <meta name="description" content="NFTs com benefícios exclusivos! Acesso vitalício as gravações dos cursos de Yield Hackers em DeFi enquanto portador dessa NFT da comunidade, você garante seu acesso à todas as gravações dos nossos cursos de DeFi, desde a 1ª Turma até as próximas turmas que ainda irão acontecer.">
+    <meta property="og:image" content="https://mint.caiovicentino.com.br/caio_vicentino_assets/img/BGSite1600x1200px.png">
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, shrink-to-fit=no">
+    <!-- width=device-width, initial-scale=1, user-scalable=0, shrink-to-fit=no -->
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="../caio_vicentino_assets/icon/Favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../caio_vicentino_assets/icon/Favicon.png">
+    <!-- Bootstrap core CSS -->
+    <link href="../caio_vicentino_assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- FontAwesome kit -->
+    <script src="https://kit.fontawesome.com/407882a469.js"></script>
+    <!-- Plugins -->
+    <link href="../caio_vicentino_assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="../caio_vicentino_assets/css/animations.css" rel="stylesheet">
+    <link href="../caio_vicentino_assets/plugins/slick/slick.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link href="../caio_vicentino_assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- The Project's core CSS file -->
+    <link href="../caio_vicentino_assets/css/style.css?t=20241125093241" rel="stylesheet" >
+    <!-- The Project's Typography CSS file, includes used fonts -->
+    <link href="../caio_vicentino_assets/css/typography-default.css" rel="stylesheet" >
+    <!-- Color Scheme -->
+    <link href="../caio_vicentino_assets/css/skins/dark_cyan.css" rel="stylesheet">
+    <!-- Custom css -->
+    <link href="../caio_vicentino_assets/css/custom.css?t=20241125093241" rel="stylesheet">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://www.unpkg.com/web3@1.7.0/dist/web3.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/web3modal@1.9.9/dist/index.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider"></script>
+<script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--<script src="../caio_vicentino_assets/js/rules.js?v=--><!--"></script>-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css" rel="stylesheet">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js"></script>
+<script>
+    var baseAddress = "https://cnph.dev.mobiup.com.br";
+    let dataPay = {
+        code_nft: 1,
+        owner_current: '',
+        id: 0,
+        chain_id: 4,
+        brl_eth: ''
+    }
+    let tpModPgt = 1;
+
+    validaEndereco = true;
+
+    var tgdeveloper = {
+
+        /**
+         * getCardFlag
+         * Return card flag by number
+         *
+         * @param cardnumber
+         */
+        getCardFlag: function(cardnumber) {
+            var cardnumber = cardnumber.replace(/[^0-9]+/g, '');
+
+            var cards = {
+                visa      : /^4[0-9]{12}(?:[0-9]{3})/,
+                mastercard : /^5[1-5][0-9]{14}/,
+                diners    : /^3(?:0[0-5]|[68][0-9])[0-9]{11}/,
+                amex      : /^3[47][0-9]{13}/,
+                discover  : /^6(?:011|5[0-9]{2})[0-9]{12}/,
+                hipercard  : /^(606282\d{10}(\d{3})?)|(3841\d{15})/,
+                elo        : /^((((636368)|(438935)|(504175)|(451416)|(636297))\d{0,10})|((5067)|(4576)|(4011))\d{0,12})/,
+                jcb        : /^(?:2131|1800|35\d{3})\d{11}/,
+                aura      : /^(5078\d{2})(\d{2})(\d{11})$/
+            };
+
+            for (var flag in cards) {
+                if(cards[flag].test(cardnumber)) {
+                    return flag;
+                }
+            }
+
+            return false;
+        }
+
+    }
+</script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-244286122-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-244286122-1');
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z97ZMGEQP4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z97ZMGEQP4');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TDFZ4X6');</script>
+<!-- End Google Tag Manager -->	
+	<script src="https://cdn.jsdelivr.net/npm/merkletreejs@latest/merkletree.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/keccak256@latest/keccak256.js"></script>
+
+    <style>
+        body{
+            padding-right: 0 !important;
+        }
+
+        .banner .paragraph-banner-area{
+            padding-bottom: 60px;
+            padding-top: 40px;
+            margin-bottom: 60px;
+        }
+        .banner span.paragraph-banner{
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 10px 40px;
+            border-radius: 20px;
+            background: linear-gradient(90deg, #E250E5, #4B50E6);
+            background-color: #761ce4 !important;
+            line-height: 150%;
+            text-align: right;
+        }
+        
+        @media (max-width: 420px){
+            .banner{
+                height: 820px !important;
+            }
+        }
+
+        @media only screen and (min-width: 380px) and (max-width: 767px) {
+            .banner-bottom-text{
+                padding-top: 120px !important;
+            }
+            .img-caio{
+                width: 65%;
+            }
+        }
+
+        @media (max-width: 767px){
+            .img_card_nft{
+                width: 300px !important;
+            }
+            .banner{
+                padding-top: 120px !important;
+            }
+            .banner .paragraph-banner-area{
+                padding-bottom: 60px;
+                padding-top: 10px;
+                margin-bottom: 10px;
+            }
+            .banner span.paragraph-banner{
+                font-size: .85rem;
+
+            }
+        }
+
+    </style>
+</head>
+<body class="transparent-header front-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDFZ4X6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- preloade -->
+<div class="preload preload-container">
+    <div class="preload-logo"></div>
+</div>
+<!-- /preload -->
+
+<!-- scrollToTop -->
+<div class="scrollToTop circle"><i class="fa fa-angle-up"></i></div>
+<!-- /scrollToTop -->
+
+<style>
+    @media (max-width: 567px){
+        #myModalLogged .modal-dialog{
+            width: 100%;
+        }
+    }
+</style>
+
+
+<div class="modal right fade" id="myModalLogged" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!--<div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>-->
+
+            <div class="modal-body">
+                <!-- modal logado -->
+                <div class="modal-header-content">
+                    <div class="modal-header-content__avathars">
+                        <a href="#" class="link-modal-right d-flex align-items-center" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                            <div>
+                                <i class="fas fa-user-circle"></i> Minha carteira
+                            </div>
+                            <i class="fas fa-angle-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+<!--                            <a class="dropdown-item d-flex align-items-center" href="/profile"><i class="fas fa-user"></i> Perfil</a>-->
+                            <a class="dropdown-item d-flex align-items-center" href="javascript: void(0);" data-toggle="modal" data-target="#myModalLogged" onclick="onDisconnect();"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            <a class="dropdown-item d-flex align-items-center" href="javascript: void(0);" onclick="getBalanceReal();"><i class="fas fa-sync"></i> Atualizar saldo</a>
+                        </div>
+                        <form class="mt-2">
+                            <input type="text" id="address-input-modal-funds" class="inputcopy" value="" readonly="">
+                            <button type="button" class="btn-copycode"><i class="fas fa-copy"></i></button>
+                        </form>
+                    </div>
+                    <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+
+                <div class="modal-middle-content mt-3">
+                    <div class="wallet-funds d-flex flex-column align-items-center justify-content-center">
+                        <p>Saldo total</p>
+                        <h4 class="txt-total-brl-crypto">R$ 0,00</h4>
+                    </div>
+<!--                    <a onclick="countdown(); javascript: $('#myModalLogged').modal('hide'); scpETH(); $('.pix-buy-nft').hide();" class="btn btn-outline-default btn-block wallet-funds-button text-center" data-toggle="modal" data-target="#addFunds">-->
+<!--                        Adicionar Saldo-->
+<!--                    </a>-->
+                </div>
+                
+<!--                <div class="position-relative">-->
+<!--                    <p class="text-center paragraph__divider m-0"><span>ou</span></p>-->
+<!--                </div>-->
+
+<!--                <div class="modal-middle-content mt-3">-->
+<!--                    <div class="wallet-funds d-flex align-items-center">-->
+<!--                        <div class="w-100 text-center">-->
+<!--                            <a href="#" class="btn btn-primary" onclick="countdown(); javascript: $('#myModalLogged').modal('hide'); scpETH(); $('.pix-buy-nft').hide();" id="addFundsPix"><i class="fa-brands fa-pix"></i></a>-->
+<!--                            <p>Adicionar saldo com PIX</p>-->
+<!--                        </div>-->
+<!--                        <div class="w-100 text-center">-->
+<!--                            <a href="#" class="btn btn-dark" id="addFundsCard"><i class="fa-solid fa-credit-card"></i></a>-->
+<!--                            <p>Adicionar saldo com cartão</p>-->
+<!--                        </div>-->
+                        
+<!--                    </div>-->
+<!--                </div>-->
+                <script>
+                    function scpETH() {
+                        setTimeout(() => {
+                            $(".dropdown-cripto-item").html('<img src="../web3_assets/img/c/Ethereum.png"> ETH');
+                            $('input[name="moeda-pix"]').val('ETH');
+                        }, 1000);
+                    }
+                </script>
+                <div class="modal-middle-content mt-3">
+                    <div class="wallet-funds d-flex flex-column align-items-center justify-content-center">
+                        <h3>Rede</h3>
+                        <h3 class="name-network"></h3>
+                    </div>
+                </div>
+
+                <div class="modal-table mt-3">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Carteira</th>
+                            <th>Saldo</th>
+                        </tr>
+                        </thead>
+                        <tbody id="template-balances"></tbody>
+                    </table>
+                </div>
+
+            </div><!-- /.modal-body -->
+        </div>
+    </div>
+</div>
+<!-- /how to mind -->
+<script>
+    var txFee = true;
+    // var tpModPgt = 1;
+</script>
+<div class="modal fade modal-eve" id="payPix" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:1051;">
+	<div class="modal-dialog d-block" role="document">
+		<div class="modal-content">
+			<div class="modal-header flex-column justify-content-center" style="border-bottom: 1px solid #dee2e6;">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+                <img src="../web3_assets/img/ItsPay.png" alt="IT's Pay" width="120" style="margin:0 auto;">
+			</div>
+			<div class="modal-body p-5">
+                <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a onclick="javascript: tpModPgt = 1; $('.total-a-pagar').text('R$ 0,00');" class="nav-link active" id="home-tab" data-toggle="tab" href="#pix" role="tab" aria-controls="pix" aria-selected="true"><i class="fas fa-money-bill"></i> Pix</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a onclick="javascript: tpModPgt = 2; $('.total-a-pagar').text('R$ 0,00');" class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-credit-card"></i> Comprar com cartão</a>
+                    </li>
+                </ul>
+                <!-- body start -->
+                <div class="tab-content mt-3" id="myTabContent">
+                    <div class="tab-pane fade show active" id="pix" role="tabpanel" aria-labelledby="pix-tab">
+
+                        <!-- pix -->
+                        <div class="step1">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item active" aria-current="page">Comprar Crypto PIX</li>
+                                </ol>
+                            </nav>
+                            <form>
+                                <div class="form-group">
+                                    <label for="">Valor em R$ *</label>
+                                    <input type="text" class="form-control valor-moeda" inputmode="numeric" pattern="\d*" name="valor-moeda-pix" id="valor-moeda-pix" placeholder="100,00" readonly value="0,00" required="" onblur="getAmountCrypt('pix');" onchange="getAmountCrypt('pix');" onkeyup="getAmountCrypt('pix');" onkeypress="mascara( this, mvalor );">
+                                </div>
+                                <!--                            <div class="form-row mt-5">-->
+                                <!--                                <div class="form-group col-lg-6 col-md-6">-->
+                                <!--                                    <h6>Sumário</h6>-->
+                                <!--                                </div>-->
+                                <!--                                <div class="form-group col-lg-6 col-md-6">-->
+                                <!--                                    <h6 class="timer text-md-right"><i class="fa fa-clock" aria-hidden="true"></i> Válido por 09s</h6>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                                <!--                            <div class="form-row">-->
+                                <!--                                <div class="form-group col-lg-6 col-md-6">-->
+                                <!--                                    <h6 class="type-coin">Preço wREAL</h6>-->
+                                <!--                                </div>-->
+                                <!--                                <div class="form-group col-lg-6 col-md-6">-->
+                                <!--                                    <h6 class="text-md-right reference-price">R$ 15.689,47</h6>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                                <!--                            <div class="form-row">-->
+                                <!--                                <div class="form-group col-lg-4 col-md-4">-->
+                                <!--                                    <h6>Você receberá</h6>-->
+                                <!--                                </div>-->
+                                <!--                                <div class="form-group col-lg-8 col-md-8">-->
+                                <!--                                    <h6 class="text-md-right txt-moeda-em-carteira">0.01426315 moedas na sua carteira</h6>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                                <!--                            <div class="form-row fee" style="display:none;">-->
+                                <!--                                <div class="form-group col-lg-6 col-md-6">-->
+                                <!--                                    <h6 class="no-weight">Taxa de processamento <i class="fas fa-info-circle" aria-hidden="true"></i></h6>-->
+                                <!--                                </div>-->
+                                <!--                                <div class="form-group col-lg-6 col-md-6">-->
+                                <!--                                    <h6 class="taxa-processamento text-md-right">R$ 21,97</h6>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                                <!--                            <div class="form-row fee" style="display:none;">-->
+                                <!--                                <div class="form-group col-lg-6 col-md-6">-->
+                                <!--                                    <h6 class="no-weight">Taxa da rede (GAS)</h6>-->
+                                <!--                                </div>-->
+                                <!--                                <div class="form-group col-lg-6 col-md-6">-->
+                                <!--                                    <h6 class="text-md-right taxa-gas">R$ 19,68</h6>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                                <!--                            <div class="form-row">-->
+                                <!--                                <div class="form-group col-lg-12 text-md-right mb-0">-->
+                                <!--                                    <h6 class="text-md-right see-fee tx_taxa" onclick="seeFee();">Ver taxas</h6>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                                <!--                            <div class="form-row mt-4 align-items-center">-->
+                                <!--                                <div class="form-group col-lg-1 col-md-1 mb-0">-->
+                                <!--                                    <input type="checkbox" checked="checked" class="mb-0">-->
+                                <!--                                </div>-->
+                                <!--                                <div class="form-group col-lg-11 col-md-11 mb-0">-->
+                                <!--                                    <h6 class="mb-0">-->
+                                <!--                                        Aceita receber suas cryptos com o valor atual de cotação?-->
+                                <!--                                    </h6>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                                <div class="form-row mt-5">
+                                    <div class="form-group col-lg-8 col-md-8">
+                                        <h6>Total a ser pago via PIX</h6>
+                                    </div>
+                                    <div class="form-group col-lg-4 col-md-4">
+                                        <h6 class="total-a-pagar text-md-right">Calculando...</h6>
+                                    </div>
+                                </div>
+                                <div class="form-row justify-content-center mt-4">
+                                    <button type="button" id="btnavpston" disabled class="btn btn-lg btn-block radius-50 btn-outline-primary" onclick="javascript: $('.step1').hide(); $('.step2').show(); buyCryptoPixStepOne();">Avançar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="step2" style="display:none">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item" aria-current="page"><a href="#" onclick="javascript: $('.step1').show(); $('.step2').hide();"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Insira o endereço da carteira</li>
+                                </ol>
+                            </nav>
+                            <form>
+                                <div class="form-group">
+                                    <label for="">Carteira de Destino *</label>
+                                    <input type="text" class="form-control carteira-destino-cc-pix" id="carteira-destino-cc-pix" placeholder="0x0000000000000000000000000000000000000000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">E-mail *</label>
+                                    <input type="email" class="form-control" id="email-pix" name="email-pix" placeholder="seuemail@email.com.br" value="erick.queiroz@mobiup.com.br">
+                                </div>
+                                <div class="form-row justify-content-center mt-4">
+                                    <a type="button" class="btn btn-lg btn-block radius-50 btn-outline-primary" onclick="javascript: $('.step2').hide(); $('.step3').show(); firstStepPix();">Avançar</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="step3" style="display:none">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item" aria-current="page"><a href="#" onclick="javascript: $('.step2').show(); $('.step3').hide();"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Confirmar Código</li>
+                                </ol>
+                            </nav>
+                            <form>
+                                <div class="form-group">
+                                    <label for="codigo-email-cc-pix">Código enviado por e-mail *</label>
+                                    <input type="text" class="form-control" id="codigo-email-pix" name="codigo-email-pix" placeholder="9999">
+                                </div>
+                                <div class="form-row justify-content-center mt-4">
+                                    <a type="button" class="btn btn-lg btn-block radius-50 btn-outline-primary" onclick="javascript: $('.step3').hide(); $('.step4').show(); twoStepPix();">Avançar</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="step4" style="display:none">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item" aria-current="page"><a href="#" onclick="javascript: $('.step3').show(); $('.step4').hide();"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Dados Pessoais</li>
+                                </ol>
+                            </nav>
+                            <form>
+                                <div class="form-group">
+                                    <label for="">CPF *</label>
+                                    <input type="text" class="form-control" id="document-pix" placeholder="***.***.***-**" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );" value="054.478.473-11">
+                                </div>
+                                <div class="form-row justify-content-center mt-4">
+                                    <a type="button" class="btn btn-lg btn-block radius-50 btn-outline-primary" id="send-order-pix-loader" onclick="javascript: $('.step4').hide(); $('.step4-2').show(); sendOrderPix();">Pagar <i class="fa-brands fa-pix"></i></a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="step4-2 center text-center" style="display:none;">
+                            <div class="loadingio-spinner-rolling-803ce1ng006">
+                                <div class="ldio-d3xieere32i">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <style type="text/css">
+                                @keyframes ldio-d3xieere32i {
+                                    0% { transform: translate(-50%,-50%) rotate(0deg); }
+                                    100% { transform: translate(-50%,-50%) rotate(360deg); }
+                                }
+                                .ldio-d3xieere32i div {
+                                    position: absolute;
+                                    width: 120px;
+                                    height: 120px;
+                                    border: 20px solid #0a0a0a;
+                                    border-top-color: transparent;
+                                    border-radius: 50%;
+                                    background-color: white;
+                                    margin: 0 auto;
+                                    text-align: center;
+                                }
+                                .ldio-d3xieere32i div {
+                                    animation: ldio-d3xieere32i 1s linear infinite;
+                                    top: 100px;
+                                    left: 100px;
+                                    background-color: white;
+                                    margin: 0 auto;
+                                    text-align: center;
+                                }
+                                .loadingio-spinner-rolling-803ce1ng006 {
+                                    width: 200px;
+                                    height: 200px;
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    background-color: white;
+                                    margin: 0 auto;
+                                    text-align: center;
+                                }
+                                .ldio-d3xieere32i {
+                                    width: 100%;
+                                    height: 100%;
+                                    position: relative;
+                                    transform: translateZ(0) scale(1);
+                                    backface-visibility: hidden;
+                                    background-color: white;
+                                    margin: 0 auto;
+                                    text-align: center;
+                                    transform-origin: 0 0; /* see note above */
+                                }
+                                .ldio-d3xieere32i div { box-sizing: content-box; background-color: white; margin: 0 auto; text-align: center; }
+                                /* generated by https://loading.io/ */
+                            </style>
+                            <h3 class="text-center center" style="margin: 0 auto;">GERANDO PIX</h3>
+                        </div>
+                        <div class="step5" style="display: none;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-2 text-center">
+                                        <strong style="font-size: 24px;">R$</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <strong style="font-size: 24px;">BRL</strong>
+                                    </div>
+                                    <div class="col-4">
+                                        <strong style="font-size: 22px;" class="total-a-pagar">R$ 0,00</strong>
+                                    </div>
+                                </div>
+                                <!--                            <div class="row" style="border-bottom: 1px solid #bfbfbf;">-->
+                                <!--                                <div class="col-12" style="padding-top:10px; padding-bottom: -200px;">-->
+                                <!--                                    <small class="text-secondary">-->
+                                <!--                                        <strong>-->
+                                <!--                                            <h6>Detalhes Bancários</h6>-->
+                                <!--                                        </strong>-->
+                                <!--                                    </small>-->
+                                <!--                                    <br>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                                <hr>
+                                <div class="row">
+                                    <div class="col-11">
+                                        <small class="text-secondary"><strong>Nome da Empresa</strong></small><br>
+                                        It's PAY
+                                    </div>
+                                    <div class="col-1">
+                                        <br><a class="text-secondary" href="javascript: void(0);"><i class="fas fa-clone" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11">
+                                        <small class="text-secondary"><strong>Nome da conta</strong></small><br>
+                                        SUPERMUP PLATAFORMAS DIGITAIS LTDA
+                                    </div>
+                                    <div class="col-1">
+                                        <br><a class="text-secondary" href="javascript: void(0);"><i class="fas fa-clone" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11">
+                                        <small class="text-secondary"><strong>CNPJ</strong></small><br>
+                                        38.228.143/0001-28
+                                    </div>
+                                    <div class="col-1">
+                                        <br><a class="text-secondary" href="javascript: void(0);"><i class="fas fa-clone" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7">
+                                        <img src="" style="max-width: 225px; margin: 0 auto;" class="card-img-top" alt="..." id="pix-copia-cola-qr">
+                                        <small>Código QR do Pix</small>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <small class="text-secondary"><strong>Chave do PIX</strong></small><br>
+                                                <strong>0d4291fe-0fcf-437c-8f95-9cf3e2d5f5e4</strong>
+                                            </div>
+                                            <div class="col-1">
+                                                <br><a class="text-secondary" href="javascript: void(0);"><i class="fas fa-clone" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <small class="text-secondary"><strong>Tipo de Chave</strong></small><br>
+                                                <strong>Aleatória</strong>
+                                            </div>
+                                            <div class="col-1">
+                                                <br><a class="text-secondary" href="javascript: void(0);"><i class="fas fa-clone" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="">
+                                            <input type="text" class="form-control" id="pix-copia-cola" readonly="" aria-describedby="button-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-success btn-block text-dark" type="button" onclick="copiarTexto('pix-copia-cola');" style="cursor: pointer; color: black;">Copiar</button>
+                                            </div>
+                                        </div>
+                                        <small class="mensagem-texto-copiado"></small>
+                                    </div>
+                                    <div class="col-12">
+                                        <h3 class="text-center center timerExpirePix" style="margin: 0 auto;">Esperando pelo seu pagamento</h3>
+                                        <div class="loader" style="display:none;">Loading...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-pix-success-new" style="display: none;">
+                            <div class="successClaim">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body p-4 text-center">
+                                            <p class="mb-0 text-success"><i class="fa-regular fa-circle-check"></i></p>
+                                            <h2>Sucesso</h2>
+                                            <p>PIX efetuado com sucesso!<Br>O valor já está na sua conta.</p>
+                                        </div>
+                                        <div class="modal-footer justify-content-center" style="padding-bottom:0;">
+                                            <button type="button" class="btn radius-50 btn-outline-primary btn-lg" data-dismiss="modal">Fechar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <!-- cartão -->
+                        <div class="stepcc1">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item active" aria-current="page">Comprar Crypto Cartão</li>
+                                </ol>
+                            </nav>
+                            <form>
+<!--                                <div class="form-group dropdown">-->
+<!--                                    <label for="">Moeda *</label>-->
+<!--                                    <input type="hidden" name="moeda" id="moeda" value="MATIC">-->
+<!--                                    <div class="custom__select-criptos-cc dropdown-toggle" id="dropdownCriptoCc" data-toggle="dropdown" aria-expanded="false" data-reference="parent">-->
+<!--                                        <span class="mb-0 dropdown-cripto-item-cc">Selecione uma moeda</span>-->
+<!--                                         <span><i class="fas fa-caret-down"></i></span> -->
+<!--                                    </div>-->
+<!--                                    <div class="dropdown-menu custom__select-criptos-list-cc" aria-labelledby="dropdownCriptoCc">-->
+<!--                                        -->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <div class="form-group mb-5">
+                                    <label for="valor-moed">Valor em R$ *</label>
+                                    <input class="form-control valor-moeda" inputmode="numeric" pattern="\d*" name="valor-moeda" id="valor-moeda" placeholder="100,00" required="" value="0,00" readonly onblur="getAmountCrypt('cc');" onchange="getAmountCrypt('cc');" onkeyup="getAmountCrypt('cc');">
+                                </div>
+<!--                                <div class="form-row mt-5">-->
+<!--                                    <div class="form-group col-lg-6 col-md-6">-->
+<!--                                        <h6>Sumário</h6>-->
+<!--                                    </div>-->
+<!--                                    <div class="form-group col-lg-6 col-md-6">-->
+<!--                                        <h6 class="timer pull-right">-->
+<!--                                            <i class="fas fa-clock"></i>-->
+<!--                                            Válido por 20s-->
+<!--                                        </h6>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form-row">-->
+<!--                                    <div class="form-group col-lg-6 col-md-6">-->
+<!--                                        <h6 class="type-coin">Preço ETH</h6>-->
+<!--                                    </div>-->
+<!--                                    <div class="form-group col-lg-6 col-md-6">-->
+<!--                                        <h6 class="pull-right reference-price">-->
+<!--                                            R$ 0,00-->
+<!--                                        </h6>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form-row">-->
+<!--                                    <div class="form-group col-lg-4 col-md-4">-->
+<!--                                        <h6>Você receberá</h6>-->
+<!--                                    </div>-->
+<!--                                    <div class="form-group col-lg-8 col-md-8">-->
+<!--                                        <h6 class="pull-right txt-moeda-em-carteira">-->
+<!--                                            0.0000 moedas na sua carteira-->
+<!--                                        </h6>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form-row fee" style="display:none;">-->
+<!--                                    <div class="form-group col-lg-6 col-md-6">-->
+<!--                                        <h6 class="no-weight">Taxa de processamento <i class="fas fa-info-circle"></i></h6>-->
+<!--                                    </div>-->
+<!--                                    <div class="form-group col-lg-6 col-md-6">-->
+<!--                                        <h6 class="taxa-processamento pull-right">R$ 0,00</h6>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form-row fee" style="display:none;">-->
+<!--                                    <div class="form-group col-lg-6 col-md-6">-->
+<!--                                        <h6 class="no-weight">Taxa da rede (GAS)</h6>-->
+<!--                                    </div>-->
+<!--                                    <div class="form-group col-lg-6 col-md-6">-->
+<!--                                        <h6 class="pull-right taxa-gas">R$ 0,00</h6>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form-row">-->
+<!--                                    <div class="form-group col-lg-8 col-md-8 offset-4">-->
+<!--                                        <h6 class="pull-right see-fee tx_taxa" onclick="seeFee();">Ver taxas</h6>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form-group">-->
+<!--                                    <h6 class="no-weight">Slippage Tolerância <i class="fas fa-info-circle"></i></h6>-->
+<!--                                </div>-->
+<!--                                <div class="form-row">-->
+<!--                                    <div class="form-group col-md-3 col-3">-->
+<!--                                        <input type="radio" class="btn-check btn-primary" name="options-outlined" id="slip1percent" autocomplete="off" value="1">-->
+<!--                                        <label onclick="switchSlip('slip1percent', 0.01);" class="btn btn-primary" for="slip1percent">1%</label>-->
+<!--                                    </div>-->
+<!---->
+<!--                                    <div class="form-group col-md-3 col-3">-->
+<!--                                        <input type="radio" class="btn-check btn-primary" name="options-outlined" id="slip5percent" autocomplete="off" value="5">-->
+<!--                                        <label onclick="switchSlip('slip5percent', 0.05);" class="btn btn-primary" for="slip5percent">5%</label>-->
+<!--                                    </div>-->
+<!---->
+<!--                                    <div class="form-group col-md-3 col-3">-->
+<!--                                        <input type="radio" class="btn-check btn-primary" name="options-outlined" id="slip10percent" autocomplete="off" value="10">-->
+<!--                                        <label onclick="switchSlip('slip10percent', 0.10);" class="btn btn-primary" for="slip10percent">10%</label>-->
+<!--                                    </div>-->
+<!---->
+<!--                                    <div class="form-group col-md-3 col-3">-->
+<!--                                        <input class="form-control custom-slipp" inputmode="numeric" pattern="\d*" name="slip" id="slip"-->
+<!--                                               placeholder="5.00" required=""-->
+<!--                                               style="border-radius: 20px;" onkeyup="javascript: $('.slp').removeClass('bck-change'); buyCryptoData.slippage = $('#slip').val();">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form-row mt-4">-->
+<!--                                    <div class="form-group col-lg-1 col-md-1">-->
+<!--                                        <label>-->
+<!--                                            <span class="pst-re">-->
+<!--                                                <input type="checkbox" checked="checked">-->
+<!--                                                <span class="btn-checkbox"></span>-->
+<!--                                            </span>-->
+<!--                                        </label>-->
+<!--                                    </div>-->
+<!--                                    <div class="form-group col-lg-11 col-md-11">-->
+<!--                                        <h6 class="pull-right">-->
+<!--                                            Aceita receber suas cryptos com o valor atual de cotação?-->
+<!--                                        </h6>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <div class="form-row mt-4">
+                                    <div class="form-group col-lg-8 col-md-8">
+                                        <h6>Total à ser debitado no seu cartão</h6>
+                                    </div>
+                                    <div class="form-group col-lg-4 col-md-4">
+                                        <h6 class="pull-right total-a-pagar text-right">
+                                            R$ 0,00
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="form-row justify-content-center mt-4">
+                                    <a type="button" class="btn btn-lg btn-block radius-50 btn-outline-primary" onclick="buyCryptoStep();">Avançar</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="stepcc2" style="display:none">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item" aria-current="page"><a href="#" onclick="javascript: $('.stepcc1').show(); $('.stepcc2').hide();"><i class="fa fa-arrow-circle-left"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Insira o endereço da carteira</li>
+                                </ol>
+                            </nav>
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="">Carteira de Destino *</label>
+                                    <input type="text" class="form-control carteira-destino-cc" id="carteira-destino-cc" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">E-mail *</label>
+                                    <input type="email" class="form-control email-cc" id="email-cc" placeholder="seuemail@email.com.br">
+                                </div>
+                                <div class="form-row justify-content-center mt-4">
+                                    <a type="button" class="btn btn-lg btn-block radius-50 btn-outline-primary" onclick="firstStep();">Avançar</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="stepcc3" style="display:none">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item" aria-current="page"><a href="#" onclick="javascript: $('.stepcc2').show(); $('.stepcc3').hide();"><i class="fa fa-arrow-circle-left"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Confirmar Código</li>
+                                </ol>
+                            </nav>
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="codigo-email-cc-pix">Código enviado por e-mail *</label>
+                                    <input type="text" class="form-control" id="codigo-email-cc" placeholder="999999" required="" maxlength="6">
+                                </div>
+                                <div class="form-row justify-content-center mt-4">
+                                    <a type="button" class="btn btn-lg btn-block radius-50 btn-outline-primary" onclick="twoStep();">Avançar</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="stepcc4" style="display:none">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item" aria-current="page"><a href="#" onclick="javascript: $('.stepcc3').show(); $('.stepcc4').hide();"><i class="fa fa-arrow-circle-left"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Endereço da fatura</li>
+                                </ol>
+                            </nav>
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="">CEP *</label>
+                                    <input type="text" class="form-control" placeholder="*****-***" id="cep" name="cep" maxlength="9">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-8 col-md-12">
+                                        <label for="">Endereço *</label>
+                                        <input type="text" class="form-control" id="endereco" name="endereco">
+                                    </div>
+                                    <div class="form-group col-lg-4 col-md-12">
+                                        <label for="">Número *</label>
+                                        <input type="text" class="form-control" id="numero-casa" name="numero-casa">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Complemento</label>
+                                    <input type="text" class="form-control" id="complemento" name="complemento">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6 col-md-12">
+                                        <input type="hidden" name="bairro" id="bairro">
+                                        <label for="">Estado *</label>
+                                        <input type="text" class="form-control" id="estado" name="estado">
+                                    </div>
+                                    <div class="form-group col-lg-6 col-md-12">
+                                        <label for="">Cidade *</label>
+                                        <input type="text" class="form-control" id="cidade" name="cidade">
+                                    </div>
+                                </div>
+                                <div class="form-row justify-content-center mt-4">
+                                    <a type="button" class="btn btn-lg btn-block radius-50 btn-outline-primary" onclick="nextStepEndereco();">Avançar</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="stepcc5" style="display:none">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item" aria-current="page"><a href="#" onclick="javascript: $('.stepcc4').show(); $('.stepcc5').hide();"><i class="fa fa-arrow-circle-left"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Dados do cartão</li>
+                                </ol>
+                            </nav>
+
+                            <div class="card-wrapper mb-3"></div>
+
+                            <form class="form">
+                                <div class="form-group">
+                                    <label>Número do cartão *</label>
+                                    <input placeholder="Número do cartão" type="tel" autocomplete="cc-number" name="number" id="card_number" class="form-control" maxlength="19" required maxlength="19">
+                                </div>
+                                <div class="form-group">
+                                    <label>Nome do titular do cartão *</label>
+                                    <input placeholder="Nome" type="text" autocomplete="cc-name" name="name" id="card_name" class="form-control" required maxlength="26">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-lg-3 col-md-12">
+                                        <label>Validade *</label>
+                                        <!--                                        <input placeholder="Mês/ano (mm/aa)" type="tel" name="expiry" id="expiry" class="form-control" required>-->
+                                        <select id="expiry_month" class="form-control" name="expiry_month" style="width: 100%;">
+                                            <option value="">--</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-3 col-md-12">
+                                        <label>Validade *</label>
+                                        <!--                                        <input placeholder="Mês/ano (mm/aa)" type="tel" name="expiry" id="expiry" class="form-control" required>-->
+                                        <select id="expiry_year" class="form-control" name="expiry_year" style="width: 100%;">
+                                            <option value="">----</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                            <option value="2032">2032</option>
+                                            <option value="2033">2033</option>
+                                            <option value="2034">2034</option>
+                                            <option value="2035">2035</option>
+                                            <option value="2036">2036</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-6 col-md-12">
+                                        <label>Cod. de segurança *</label>
+                                        <input placeholder="Cód. de segurança" autocomplete="cc-cvc" type="number" name="cvc" id="card_cvv" class="form-control" maxlength="4" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Cpf/cnpj</label>
+                                    <input placeholder="CPF/CNPJ" type="text" name="document" id="document" class="form-control" maxlength="14" required>
+                                </div>
+                                <div class="form-row justify-content-center mt-4">
+                                    <input type="button" class="btn btn-lg btn-block radius-50 btn-outline-primary" value="PAGAR" onclick="sendOrder();">
+                                </div>
+                            </form>
+                            <form autocomplete="on" action="" method="post" enctype="application/x-www-form-urlencoded" role="form" id="form_payment">
+                                <input type="hidden" name="payment_token" id="form_payment_token">
+                                <input type="hidden" name="token" id="form_token" value="">
+                                <input type="hidden" name="nome" id="form_nome">
+                                <input type="hidden" name="documento" id="form_documento">
+                                <input type="hidden" name="cep" id="form_cep">
+                                <input type="hidden" name="endereco" id="form_endereco">
+                                <input type="hidden" name="complemento" id="form_complemento">
+                                <input type="hidden" name="estado" id="form_estado">
+                                <input type="hidden" name="cidade" id="form_cidade">
+                                <input type="hidden" name="card_expiration" id="form_card_expiration">
+                                <input type="hidden" name="card_number" id="form_card_number">
+                                <input type="hidden" name="card_brand" id="form_card_brand">
+                                <input type="hidden" name="card_cvv" id="form_card_cvv">
+                                <input type="hidden" name="card_holder_name" id="form_card_holder_name">
+                                <input type="hidden" name="card_bin" id="form_card_bin">
+                                <input type="hidden" name="card_last_four" id="form_card_last_four">
+
+                                <input type="hidden" name="auth_cavv" id="auth_cavv">
+                                <input type="hidden" name="auth_xid" id="auth_xid">
+                                <input type="hidden" name="auth_eci" id="auth_eci">
+                                <input type="hidden" name="auth_reference_id" id="auth_reference_id">
+                                <input type="hidden" name="auth_version" id="auth_version">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- body end -->
+			</div>
+			<!-- <div class="modal-footer">
+				<button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-sm btn-default">Save changes</button>
+			</div> -->
+		</div>
+	</div>
+</div>
+<input type="hidden" id="order-id-pix" value="" />
+<script>
+    var intervalPt;
+    var pago = false;
+
+    function buyCryptoPixStepOne() {
+        let buyCryptoValidation = validateBuyCryptoPix();
+        if (buyCryptoValidation) {
+            $(".step1").hide();
+            $(".step2").show();
+        }
+        return false;
+    }
+
+    function validateBuyCryptoPix() {
+        let crypto  = $('#moeda-pix').val();
+        let valor   = $('#valor-moeda-pix').val();
+
+        if (crypto == '') {
+            swal.fire('Erro', 'Informe a moeda.', 'error');
+            $(".step1").show();
+            $(".step2").hide();
+            return false;
+        }
+
+        if (valor == '') {
+            swal.fire('Erro', 'Informe o valor desejado.', 'error');
+            $(".step1").show();
+            $(".step2").hide();
+            return false;
+        }
+
+        return true;
+    }
+
+    function firstStepPix () {
+        let firstValidation = validateFirstStepPix();
+        if (firstValidation) {
+            $(".step2").hide();
+            $(".step3").show();
+        }
+        return false;
+    }
+
+    function validateFirstStepPix() {
+        let carteiraDestino = $("#carteira-destino-cc-pix").val();
+        let email           = $("#email-pix").val();
+
+        buyCryptoData.address = carteiraDestino;
+
+        if (carteiraDestino == '') {
+            swal.fire('Erro', 'Você deve informar a carteira de destino.', 'error');
+            $(".step2").show();
+            $(".step3").hide();
+            return false;
+        }
+
+        if (email == '') {
+            swal.fire('Erro', 'Por favor, informe seu e-mail para validação.', 'error');
+            $(".step2").show();
+            $(".step3").hide();
+            return false;
+        }
+
+        localStorage.setItem("email-cc-pix", email);
+
+        var form_data = new FormData();
+        form_data.append('email', email);
+
+        $.ajax({
+            type: 'POST',
+            url: '/poc/sendEmailCodePoc',
+            contentType: false,
+            processData: false,
+            data: form_data,
+            success: function (data) {
+                console.log(data);
+                return true;
+            },
+            error: function (xhr, errorMessage) {
+                $(".step2").show();
+                $(".step3").hide();
+                console.log(xhr);
+                console.log(errorMessage);
+                swal.fire('Erro', 'Ops, aconteceu inesperado no momento do envio do código para seu e-mail!', 'error');
+                return false;
+            }
+        });
+    }
+
+    function twoStepPix () {
+        let twoValidation = validateTwoStepPix();
+        if (twoValidation) {
+            $(".code-email-verificacao-pix").hide();
+            $(".pix-dados").show();
+        }
+        return false;
+    }
+
+    function validateTwoStepPix() {
+        let sms     = $("#codigo-email-pix").val();
+        let email   = localStorage.getItem("email-cc-pix");
+
+        if (sms == '') {
+            swal.fire('Erro', 'Você deve informar o código de verificação enviado para o seu e-mail.', 'error');
+            $(".step3").show();
+            $(".step4").hide();
+            return false;
+        }
+
+        $(".step4").show();
+        $(".step3").hide();
+
+        // $.ajax({
+        //     url: '/poc/verifyEmailCodePoc',
+        //     method: 'post',
+        //     data: {
+        //         email: email,
+        //         code: sms
+        //     },
+        //     success: function (data) {
+        //         console.log(data);
+        //         var data = JSON.parse(data);
+        //         if (data.results.status == true) {
+        //             $(".step4").show();
+        //             $(".step3").hide();
+        //             return true;
+        //         } else {
+        //             swal.fire('Erro', 'Ops, Código inválido!', 'error');
+        //             $(".step3").show();
+        //             $(".step4").hide();
+        //         }
+        //     },
+        //     error: function (xhr, errorMessage) {
+        //         console.log(xhr);
+        //         console.log(errorMessage);
+        //         swal.fire('Erro', 'Ops, aconteceu algo inesperado, favor tente novamente!', 'error');
+        //         $(".step3").show();
+        //         $(".step4").hide();
+        //         return false;
+        //     }
+        // });
+    }
+
+    function sendOrderPix() {
+        // swal.fire({
+        //     title: 'Processando...',
+        //     html: 'Aguarde um pouco, estamos processando seu pedido!',
+        //     allowOutsideClick: false,
+        //     onBeforeOpen: () => {
+        //         swal.showLoading();
+        //     },
+        // });
+        //$("#step4-2").show();
+        let validaFrom = validatePaymentFormPix();
+        return false;
+    }
+
+    function validatePaymentFormPix() {
+        let document        = $('#document-pix').val().replace("-", "").replace(".", "").replace(".", "");
+        let carteiraDestino = $('#carteira-destino-cc-pix').val();
+        let email           = $('#email-pix').val();
+
+        if (document == '') {
+            swal.fire('Erro', 'Você deve informar o CPF do titular do cartão.', 'error');
+            return false;
+        } else if (! CPF.validate(document)) {
+            swal.fire('Erro', 'Você deve informar um CPF válido.', 'error');
+            return false;
+        }
+
+        if (carteiraDestino == '') {
+            swal.fire('Erro', 'Você deve informar a carteira de destino.', 'error');
+            return false;
+        }
+
+        if (email == '') {
+            swal.fire('Erro', 'Por favor, informe seu e-mail para validação.', 'error');
+            return false;
+        }
+
+        localStorage.setItem("document-pix", document);
+        localStorage.setItem("carteira-destino-cc-pix", $('#carteira-destino-cc-pix').val());
+        localStorage.setItem("email-cc-pix", email);
+
+        buyCryptoData.address = $('#carteira-destino-cc-pix').val();
+
+        var tt = buyCryptoData.total_amount * 100;
+
+        $.post("/nft/pix", {
+            name : email,
+            email: email,
+            document_number: document,
+            document: document,
+            phone_number: "",
+            street: "",
+            number: "",
+            complement: "",
+            district: "",
+            city: "",
+            state: "",
+            country: "",
+            postal_code: "",
+            amount: tt,
+            currency: "BRL",
+            hash: '1c13bd6e-79f1-11ec-90d6-0242ac120003',
+            description: "ITS PAY"
+        }).done(function(data) {
+            console.log(data);
+            var data = JSON.parse(data);
+            try {
+                swal.close();
+                $(".step4-2").hide();
+                $(".step4").hide();
+                $(".step5").show();
+                $("#pix-copia-cola-qr").attr("src", data.image);
+                $("#pix-copia-cola").val(data.additional_data.qr_code);
+                $("#order-id-pix").val(data.additional_data.transaction_id);
+                intervalPt = setInterval(() => {
+                    decodificaPix(data.additional_data.transaction_id, document, buyCryptoData.total_amount);
+                }, 5000);
+            } catch (e) {
+                $(".step4").show();
+                console.log(e);
+                swal.close();
+                swal.fire('Erro', 'Ops, algo inesperado aconteceu, favor tente mais tarde.', 'error');
+                return false;
+            }
+        });
+    }
+
+    function readContract() {
+        ethereum.enable();
+        web3 = new Web3(provider);
+        if (userLoginData.currentChainId == 4) {
+            var contract = new web3.eth.Contract(abi, contractAddress);
+        }
+
+        if (userLoginData.currentChainId == 80001) {
+            var contract = new web3.eth.Contract(abiPolygon, contractAddressPolygon);
+        }
+
+        return contract;
+    }
+
+    function methodPayNft() {
+        swal.fire({
+            title: '<strong>Pagamento</strong>',
+            icon: 'success',
+            html:
+                '<button class="btn btn-success" onclick="buyNft()"><i class="fas fa-wallet"></i> Wallet</button> <button class="btn btn-success" onclick="javascript: swal.close(); completeDataPixBuyNft();" data-toggle="modal" data-target="#payPix"><i class="fas fa-money"></i> PIX</button> <button class="btn btn-success" onclick="swal.close(); completeDataCcBuyNft();" data-toggle="modal" data-target="#payPix"><i class="fas fa-money"></i> Cartão</button>',
+            showCloseButton: false,
+            showConfirmButton: false,
+            showCancelButton: false,
+            focusConfirm: false,
+            footer: ''
+        })
+    }
+
+    function completeDataPixBuyNft() {
+        setTimeout(() => {
+            typeBuy = 'pix';
+            tpModPgt = 1;
+            getAmountCrypt('pix');
+            countdown();
+            $('#pix, #home-tab').addClass('active').addClass('show');
+            $('#profile, #profile-tab').removeClass('show').removeClass('active');
+            $("#pix").attr('aria-selected', 'true');
+            $("#profile").attr('aria-selected', 'false');
+        }, 1500);
+    }
+
+    function completeDataCcBuyNft() {
+        setTimeout(() => {
+            typeBuy = 'cc';
+            tpModPgt = 1;
+            getAmountCrypt('cc');
+            countdown();
+            $('#profile, #profile-tab').addClass('active').addClass('show');
+            $('#pix, #home-tab').removeClass('show').removeClass('active');
+            $("#profile").attr('aria-selected', 'true');
+            $("#pix").attr('aria-selected', 'false');
+        }, 1500);
+    }
+
+    function buyNft() {
+        var code_nft        = 1;
+        var id              = dataPay.id;
+        var chain_id        = dataPay.chain_id;
+
+        var url_link                = '';
+
+        if (userLoginData.address == '') {
+            swal.fire('Ops', 'Você precisa conectar com sua wallet!.', 'warning');
+            return;
+        }
+
+        if (chain_id != userLoginData.currentChainId) {
+            swal.fire({
+                title: '<strong>Atenção</strong>',
+                icon: 'warning',
+                html:
+                    'Conecte-se à rede onde o NFT está criado.',
+                showCloseButton: false,
+                showConfirmButton: false,
+                showCancelButton: false,
+                focusConfirm: false,
+                allowOutsideClick: false
+            })
+            changeNetwork(chainData.chainId);
+        }
+
+        // console.log(parseFloat(userLoginData.balance_real) < parseFloat(price_real_nft_realtime));
+        // if (parseFloat(userLoginData.balance_real) < parseFloat(price_real_nft_realtime)) {
+        //     swal.fire({
+        //         title: '<strong>Ops!</strong>',
+        //         icon: 'warning',
+        //         html:
+        //             'Você está sem saldo, favor adicione saldo em sua wallet para poder comprar seu NFT.',
+        //         showCloseButton: false,
+        //         showConfirmButton: false,
+        //         showCancelButton: false,
+        //         focusConfirm: false,
+        //         footer: '<button class="btn btn-success" data-toggle="modal" data-target="#addFunds" onclick="javascript: swal.close();">Adicionar Sado</button>'
+        //     });
+        //     return;
+        // }
+
+        if (userLoginData.currentChainId == 4) {
+            url_link            = url_network;
+        }
+
+        if (userLoginData.currentChainId == 80001) {
+            url_link            = url_network_polygon;
+        }
+
+        swal.fire({
+            title: 'Acessando sua wallet!',
+            html: 'Para que você confirme a transação...',
+            allowOutsideClick: false,
+            onBeforeOpen: () => {
+                swal.showLoading();
+            },
+        });
+
+        var contract = readContract();
+
+        contract.methods.mint(parseInt(code_nft)).send({
+            from: userLoginData.address
+        }, function (err, res) {
+            console.log("processando");
+            console.log(err, res);
+            swal.close();
+            swal.fire({
+                title: 'Um momento!',
+                html: 'Aguardando confirmação da blockchain...',
+                allowOutsideClick: false,
+                onBeforeOpen: () => {
+                    swal.showLoading();
+                },
+            });
+        }).then(function (tx) {
+            console.log("processado");
+            console.log(tx);
+            swal.close();
+            // swal.fire('Parabéns', 'Você acabou de comprar um NFT.', 'success');
+            swal.fire({
+                title: '<strong>Parabéns</strong>',
+                icon: 'success',
+                html:
+                    'Você acabou de comprar um NFT',
+                showCloseButton: false,
+                showConfirmButton: false,
+                showCancelButton: false,
+                focusConfirm: false,
+                footer: '<button class="btn btn-success" onclick="addTokenMetamask()"><i class="fa fa-plus-circle"></i> Adicionar NFT em sua Metamask</button>'
+            })
+        }).catch(function (error) {
+            console.log("erro");
+            console.log(error);
+            swal.close();
+            swal.fire('Ops', 'Você cancelou a transação.', 'error');
+        });
+    }
+
+    function assetsMerchantTotalGeral() {
+        $.post("/poc/assetsMerchantTotalGeral").done(function (data) {
+            $('.ttinvestido').text(data.results.investido);
+            $('.ttemprestado').text(data.results.emprestado);
+        });
+    }
+
+    function dadosTokens() {
+        var wREAL       = 0;
+        var wRealUm     = 0;
+        var wRealDois   = 0;
+        var wRealTres   = 0;
+        var wRealQuatro = 0;
+        var wRealCinco  = 0;
+        $.post("/poc/dataTokens", {
+            address: userLoginData.address
+        }).done(function (data) {
+            console.log(data);
+            if (data.results.status == false) {
+                $(".wRealSUM").text(wREAL + " wREAL");
+                $(".wRealSUMBRL").text("BRL — R$ " + number_format(wREAL, 2, ',', '.'));
+                $(".wRealUm").text(wRealUm + " wREAL");
+                $(".wRealDois").text(wRealDois + " wREAL");
+                $(".wRealTres").text(wRealTres + " wREAL");
+                $(".wRealQuatro").text(wRealQuatro + " wREAL");
+                $(".wRealCinco").text(wRealCinco + " wREAL");
+
+                $(".wRealUmBRL").text("BRL — R$ " + number_format(wRealUm, 2, ',', '.'));
+                $(".wRealDoisBRL").text("BRL — R$ " + number_format(wRealDois, 2, ',', '.'));
+                $(".wRealTresBRL").text("BRL — R$ " + number_format(wRealTres, 2, ',', '.'));
+                $(".wRealQuatroBRL").text("BRL — R$ " + number_format(wRealQuatro, 2, ',', '.'));
+                $(".wRealCincoBRL").text("BRL — R$ " + number_format(wRealCinco, 2, ',', '.'));
+
+                $(".wRealUmBRLJuros").text("BRL — R$ " + number_format(wRealUm, 2, ',', '.'));
+                $(".wRealDoisBRLJuros").text("BRL — R$ " + number_format(wRealDois, 2, ',', '.'));
+                $(".wRealTresBRLJuros").text("BRL — R$ " + number_format(wRealTres, 2, ',', '.'));
+                $(".wRealQuatroBRLJuros").text("BRL — R$ " + number_format(wRealQuatro, 2, ',', '.'));
+                $(".wRealCincoBRLJuros").text("BRL — R$ " + number_format(wRealCinco, 2, ',', '.'));
+
+                $("#vlr-tot-hed").text("R$ " + number_format(wRealUm + wRealDois + wRealTres + wRealQuatro + wRealCinco, 2, ',', '.'));
+            } else {
+                $.each(data.results, function (chave, valor){
+                    wREAL += parseInt(valor.qtde_quotas);
+                    if (parseInt(valor.id_merchant) == 1) {
+                        wRealUm += parseInt(valor.qtde_quotas);
+                    }
+                    if (parseInt(valor.id_merchant) == 2) {
+                        wRealDois += parseInt(valor.qtde_quotas);
+                    }
+                    if (parseInt(valor.id_merchant) == 3) {
+                        wRealTres += parseInt(valor.qtde_quotas);
+                    }
+                    if (parseInt(valor.id_merchant) == 4) {
+                        wRealQuatro += parseInt(valor.qtde_quotas);
+                    }
+                    if (parseInt(valor.id_merchant) == 5) {
+                        wRealCinco += parseInt(valor.qtde_quotas);
+                    }
+                });
+                $(".wRealSUM").text(wREAL + " wREAL");
+                $(".wRealSUMBRL").text("BRL — R$ " + number_format(wREAL, 2, ',', '.'));
+                $(".wRealUm").text(wRealUm + " wREAL");
+                $(".wRealDois").text(wRealDois + " wREAL");
+                $(".wRealTres").text(wRealTres + " wREAL");
+                $(".wRealQuatro").text(wRealQuatro + " wREAL");
+                $(".wRealCinco").text(wRealCinco + " wREAL");
+
+                $(".wRealUmBRL").text("BRL — R$ " + number_format(wRealUm, 2, ',', '.'));
+                $(".wRealDoisBRL").text("BRL — R$ " + number_format(wRealDois, 2, ',', '.'));
+                $(".wRealTresBRL").text("BRL — R$ " + number_format(wRealTres, 2, ',', '.'));
+                $(".wRealQuatroBRL").text("BRL — R$ " + number_format(wRealQuatro, 2, ',', '.'));
+                $(".wRealCincoBRL").text("BRL — R$ " + number_format(wRealCinco, 2, ',', '.'));
+
+                $(".wRealUmBRLJuros").text("BRL — R$ " + number_format(wRealUm * 0.012, 2, ',', '.'));
+                $(".wRealDoisBRLJuros").text("BRL — R$ " + number_format(wRealDois * 0.0135, 2, ',', '.'));
+                $(".wRealTresBRLJuros").text("BRL — R$ " + number_format(wRealTres * 0.0123, 2, ',', '.'));
+                $(".wRealQuatroBRLJuros").text("BRL — R$ " + number_format(wRealQuatro * 0.015, 2, ',', '.'));
+                $(".wRealCincoBRLJuros").text("BRL — R$ " + number_format(wRealCinco * 0.013, 2, ',', '.'));
+
+                $("#vlr-tot-hed").text("R$ " + number_format(wRealUm + wRealDois + wRealTres + wRealQuatro + wRealCinco, 2, ',', '.'));
+            }
+
+        });
+    }
+
+    function decodificaPix($orderID, $document, $amount) {
+        var address_owner = userLoginData.address;
+        var amount = parseInt($amount);
+        var amount = 1;
+
+        if (userLoginData.currentChainId == 4) {
+            address_contract    = contractAddress;
+            url_link            = url_network;
+        }
+
+        if (userLoginData.currentChainId == 80001) {
+            address_contract    = contractAddressPolygon;
+            url_link            = url_network_polygon;
+        }
+
+        $.post("/nft/decodificaPix", {
+            orderId : $orderID
+        }).done(function(data) {
+            var data = JSON.parse(data);
+            if (data.statePix === "PAGO" && pago == false) {
+                $(".step5").hide();
+                $(".step-pix-success-new").show();
+                pago = true;
+                clearInterval(intervalPt);
+                var contract = readContract();
+                setTimeout(() => {
+                    contract.methods.mint(parseInt(amount)).send({
+                        from: userLoginData.address
+                    }, function (err, res) {
+                        swal.close();
+                        swal.fire({
+                            title: 'Um momento!',
+                            html: 'Aguardando confirmação da blockchain...',
+                            allowOutsideClick: false,
+                            onBeforeOpen: () => {
+                                swal.showLoading();
+                            },
+                        });
+                    }).then(function (tx) {
+                        console.log("processado");
+                        console.log(tx);
+
+                        swal.close();
+                        swal.fire({
+                            title: '<strong>Parabéns</strong>',
+                            icon: 'success',
+                            html:
+                                'Você acabou de comprar um NFT',
+                            showCloseButton: false,
+                            showConfirmButton: false,
+                            showCancelButton: false,
+                            focusConfirm: false,
+                            footer: '<button class="btn btn-success" onclick="addTokenMetamask()"><i class="fa fa-plus-circle"></i> Adicionar EVEDAO em sua Metamask</button>'
+                        });
+                    }).catch(function (error) {
+                        console.log("erro");
+                        console.log(error);
+                        swal.close();
+                        swal.fire('Ops', 'Você cancelou a transação.', 'error');
+                    });
+                }, 1500);
+            }
+        });
+    }
+
+    function newBorrowing() {
+        $.post("/poc/newBorrowing", {
+            id_merchant: 1,
+            address: userLoginData.address ? userLoginData.address : '',
+            amount: 1550
+        }).done(function (data) {
+            var data = JSON.parse(data);
+            console.log(data);
+        });
+    }
+
+    async function addTokenMetamask() {
+        const tokenSymbol = 'EVEDAO';
+        const tokenDecimals = 0;
+        const tokenImage = 'https://img.freepik.com/vetores-gratis/sushiswap-sushi-token-simbolo-criptomoeda-logotipo-icone-de-moeda-isolado-em-fundo-branco-ilustracao-vetorial_337410-1379.jpg';
+
+        var con = contractAddress;
+
+        try {
+            const wasAdded = await ethereum.request({
+                method: 'wallet_watchAsset',
+                params: {
+                    type: 'ERC20',
+                    options: {
+                        address: con,
+                        symbol: tokenSymbol,
+                        decimals: tokenDecimals,
+                        image: tokenImage,
+                    },
+                },
+            }).then(function (success) {
+                swal.close();
+                console.log(success);
+            });
+
+            if (wasAdded) {
+                window.ethereum.on('close', function (accounts) { console.log('accounts'); console.log(accounts); console.log('accounts'); })
+            } else {
+                console.log('wasAdded')
+                console.log(wasAdded)
+                console.log('wasAdded')
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    /* Máscaras ER */
+    function mascara(o,f){
+        v_obj=o
+        v_fun=f
+        setTimeout("execmascara()",1)
+    }
+    function execmascara(){
+        v_obj.value=v_fun(v_obj.value)
+    }
+
+    function mvalor(v){
+        v=v.replace(/\D/g,"");//Remove tudo o que não é dígito
+        v=v.replace(/(\d)(\d{8})$/,"$1.$2");//coloca o ponto dos milhões
+        v=v.replace(/(\d)(\d{5})$/,"$1.$2");//coloca o ponto dos milhares
+
+        v=v.replace(/(\d)(\d{2})$/,"$1,$2");//coloca a virgula antes dos 2 últimos dígitos
+        return v;
+    }
+
+    function copiarTexto (id) {
+        var copyText = document.getElementById(id);
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        navigator.clipboard.writeText(copyText.value);
+
+        $(".mensagem-texto-copiado").html(`<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Copiado!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>`);
+    }
+
+    function getBalanceReal() {
+        if (userLoginData.address != "") {
+            //$.post( "/nft/convertCryptoFiat", { amount: userLoginData.balance, crypto: 'ETH', fiat: 'BRL' })
+            $.post( "/nft/lastPriceWallet", { amount: userLoginData.balance, crypto: 'ETH', fiat: 'BRL', address: userLoginData.address })
+                .done(function(data) {
+                    var data = JSON.parse(data);
+                    try {
+                        if (data.rfq) {
+                            $(".txt-total-brl-crypto").text("R$ " + number_format(data.rfq, 2, ',', '.'));
+                            calculaTotal(data.gas);
+                            userLoginData.balance_real = data.rfq;
+                        }
+                    } catch (error) {
+                        $(".txt-total-brl-crypto").text("R$ " + number_format(0, 2, ',', '.'));
+                        //calculaTotal(0);
+                        userLoginData.balance_real = 0;
+                    }
+                });
+        }
+    }
+
+    var horaImprimivel = "";
+    var tempo = 20;
+
+    function countdown() {
+        // Se o tempo não for zerado
+        if ((tempo - 1) >= -1) {
+            // Pega a parte inteira dos minutos
+            var min = parseInt(tempo / 60);
+            // Calcula os segundos restantes
+            var seg = tempo % 60;
+
+            // Formata o número menor que dez, ex: 08, 07, ...
+            if (min < 10) {
+                min = "0" + min;
+                min = min.substr(0, 2);
+            }
+            if (seg <= 9) {
+                seg = "0" + seg;
+            }
+
+            // Cria a variável para formatar no estilo hora/cronômetro
+            //horaImprimivel = '00:' + min + ':' + seg;
+            horaImprimivel = '<i class="fa fa-clock"></i> Válido por ' + seg + 's';
+            //JQuery pra setar o valor
+            $(".timer").html(horaImprimivel);
+
+            // Define que a função será executada novamente em 1000ms = 1 segundo
+            setTimeout('countdown()', 1000);
+
+            // diminui o tempo
+            tempo--;
+
+            // Quando o contador chegar a zero faz esta ação
+        } else {
+            $('#myAlert').show().fadeOut(5000);
+            tempo = 20;
+            let sf;
+            if (tpModPgt == 1) {
+                sf = 'pix';
+            } else {
+                sf = 'cc';
+            }
+            getAmountCrypt(sf);
+            countdown();
+        }
+    }
+
+    function buyCryptoStep() {
+        getAmountCrypt('cc');
+        let buyCryptoValidation = validateBuyCrypto();
+        if (buyCryptoValidation) {
+            $('.stepcc1').hide();
+            $('.stepcc2').show();
+        }
+        return false;
+    }
+
+    function validateBuyCrypto() {
+        let crypto  = $('#moeda').val();
+        let valor   = $('#valor-moeda').val();
+
+        if (crypto == '') {
+            swal.fire('Erro', 'Informe a moeda.', 'error');
+            $('.stepcc1').show();
+            $('.stepcc2').hide();
+            return false;
+        }
+
+        if (valor == '') {
+            swal.fire('Erro', 'Informe o valor desejado.', 'error');
+            $('.stepcc1').show();
+            $('.stepcc2').hide();
+            return false;
+        }
+
+        return true;
+    }
+
+    function firstStep () {
+        let firstValidation = validateFirstStep();
+        if (firstValidation) {
+            $('.stepcc2').hide();
+            $('.stepcc3').show();
+        }
+        return false;
+    }
+
+    function validateFirstStep() {
+        let carteiraDestino = $("#carteira-destino-cc").val();
+        let email           = $("#email-cc").val();
+
+        buyCryptoData.address = carteiraDestino;
+
+        if (carteiraDestino == '') {
+            swal.fire('Erro', 'Você deve informar a carteira de destino.', 'error');
+            $('.stepcc2').show();
+            $('.stepcc3').hide();
+            return false;
+        }
+
+        if (email == '') {
+            swal.fire('Erro', 'Por favor, informe seu e-mail para validação.', 'error');
+            $('.stepcc2').show();
+            $('.stepcc3').hide();
+            return false;
+        }
+
+        localStorage.setItem("email-cc-pix", email);
+        localStorage.getItem("email-cc-pix");
+
+        $.ajax({
+            url: '/nft/sendEmailCode',
+            method: 'post',
+            data: {
+                email: email
+            },
+            success: function (data) {
+                console.log(data);
+                $('.stepcc2').hide();
+                $('.stepcc3').show();
+                return true;
+            },
+            error: function (xhr, errorMessage) {
+                $('.stepcc2').show();
+                $('.stepcc3').hide();
+                swal.fire('Erro', 'Ops, aconteceu inesperado no momento do envio do código para seu e-mail!', 'error');
+                return false;
+            }
+        });
+
+        return true;
+    }
+
+    function twoStep () {
+        let twoValidation = validateTwoStep();
+        if (twoValidation) {
+            $('.stepcc3').hide();
+            $('.stepcc4').show();
+        }
+        return false;
+    }
+
+    function validateTwoStep() {
+        let sms     = $("#codigo-email-cc").val();
+        let email   = localStorage.getItem("email-cc-pix");
+
+        if (sms == '') {
+            swal.fire('Erro', 'Você deve informar o código de verificação enviado para o seu e-mail.', 'error');
+            $('.stepcc3').show();
+            $('.stepcc4').hide();
+            return false;
+        }
+
+        $('.stepcc3').hide();
+        $('.stepcc4').show()
+
+        // $.ajax({
+        //     url: '/nft/verifyEmailCode',
+        //     method: 'post',
+        //     data: {
+        //         email: email,
+        //         code: sms
+        //     },
+        //     success: function (data) {
+        //         console.log(data);
+        //         console.log(data.results.status);
+        //         if (data.results.status == true) {
+        //             $('.stepcc3').hide();
+        //             $('.stepcc4').show();
+        //             return true;
+        //         } else {
+        //             swal.fire('Erro', 'Ops, Código inválido!', 'error');
+        //             $('.stepcc3').show();
+        //             $('.stepcc4').hide();
+        //         }
+        //     },
+        //     error: function (xhr, errorMessage) {
+        //         console.log(xhr);
+        //         console.log(errorMessage);
+        //         swal.fire('Erro', 'Ops, aconteceu algo inesperado, favor tente novamente!', 'error');
+        //         $('.stepcc3').show();
+        //         $('.stepcc4').hide();
+        //         return false;
+        //     }
+        // });
+
+        return true;
+    }
+
+    function nextStepEndereco () {
+        let validateEndereco = validateEnderecoStep();
+        if (validateEndereco) {
+            $('.stepcc4').hide();
+            $('.stepcc5').show();
+        }
+        return false;
+    }
+
+    function validateEnderecoStep() {
+        let cep         = $('#cep').val();
+        let endereco    = $('#endereco').val();
+        let complemento = $('#complemento').val();
+        let estado      = $('#estado').val();
+        let cidade      = $('#cidade').val();
+        let numeroCasa  = $('#numero-casa').val();
+        let bairro      = $('#bairro').val();
+
+        if (validaEndereco === true) {
+            if (cep == '') {
+                swal.fire('Erro', 'Você deve informar o CEP do endereço.', 'error');
+                $('.stepcc4').show();
+                $('.stepcc5').hide();
+                return false;
+            }
+            if (endereco == '') {
+                swal.fire('Erro', 'Você deve informar o endereço.', 'error');
+                $('.stepcc4').show();
+                $('.stepcc5').hide();
+                return false;
+            }
+            if (estado == '') {
+                swal.fire('Erro', 'Você deve selecionar o estado.', 'error');
+                $('.stepcc4').show();
+                $('.stepcc5').hide();
+                return false;
+            }
+            if (cidade == '') {
+                swal.fire('Erro', 'Você deve informar a cidade.', 'error');
+                $('.stepcc4').show();
+                $('.stepcc5').hide();
+                return false;
+            }
+            if (numeroCasa == '') {
+                swal.fire('Erro', 'Você deve informar o número da residência.', 'error');
+                $('.stepcc4').show();
+                $('.stepcc5').hide();
+                return false;
+            }
+            localStorage.setItem("cep-cc", cep);
+            localStorage.setItem("endereco-cc", endereco);
+            localStorage.setItem("estado-cc", estado);
+            localStorage.setItem("cidade-cc", cidade);
+            localStorage.setItem("numero-casa-cc", numeroCasa);
+            localStorage.setItem("bairro-cc", bairro);
+        }
+        return true;
+    }
+
+    function sendOrder() {
+        //$("#preloader-active").show();
+        let validaFrom = validatePaymentFormCC();
+        // if (validaFrom) {
+        //     swal.fire('Parabéns', 'Pagamento realizado com sucesso!', 'success');
+        // }
+        return false;
+    }
+
+    function validatePaymentFormCC() {
+        swal.fire({
+            title: 'Processando!',
+            html: 'Validando com sua operadora...',
+            allowOutsideClick: false,
+            onBeforeOpen: () => {
+                swal.showLoading();
+            },
+        });
+
+        let name        = $('#card_name').val();
+        let cardNumber  = $('#card_number').val().replace(/\s/g, '');
+        let expiryMonth = $('#expiry_month option:selected').val();
+        let expiryYear  = $('#expiry_year option:selected').val();
+
+        let cardCvv     = $('#card_cvv').val();
+        let document    = $('#document').val().replace("-", "").replace(".", "").replace(".", "");
+
+        let brand       = tgdeveloper.getCardFlag(cardNumber);
+
+        let carteiraDestino = $('#carteira-destino-cc').val();
+        let email           = $('#email-cc').val();
+
+        buyCryptoData.address = carteiraDestino;
+
+        let cep         = $('#cep').val().replace("-", "").replace(".", "").replace(".", "");;
+        let endereco    = $('#endereco').val();
+        let complemento = $('#complemento').val();
+        let estado      = $('#estado').val();
+        let cidade      = $('#cidade').val();
+        let numeroCasa  = $('#numero-casa').val();
+        let bairro      = $('#bairro').val();
+
+        let cardBin     = cardNumber.substr(0, 6);
+        let lastFour    = cardNumber.substr((cardNumber.length - 4), cardNumber.length);
+
+        if (cardNumber == '') {
+            swal.close();
+            swal.fire('Erro', 'Você deve informar o número do cartão.', 'error');
+            return false;
+        }
+
+        if (name == '') {
+            swal.close();
+            swal.fire('Erro', 'Você deve preencher o nome completo do titular como impresso no cartão.', 'error');
+            return false;
+        }
+
+        let date        = new Date();
+        let limitYear   = date.getFullYear() + 15;
+
+        if (expiryYear < date.getFullYear()) {
+            swal.close();
+            swal.fire('Erro', 'Ano de vencimento do cartão é inválido.', 'error');
+            return false;
+        } else if (expiryYear == date.getFullYear()) {
+            if (expiryMonth < (date.getMonth() + 1)) {
+                swal.close();
+                swal.fire('Erro', 'Mês de vencimento do cartão é inválido.', 'error');
+                return false;
+            }
+        } else if (expiryYear > limitYear) {
+            swal.close();
+            swal.fire('Erro', 'Ano de vencimento do cartão é inválido.', 'error');
+            return false;
+        }
+
+        let cardExpiry = expiryMonth + '/' + expiryYear;
+
+        if (cardCvv == '') {
+            swal.close();
+            swal.fire('Erro', 'Você deve informar o código do verso do cartão', 'error');
+            return false;
+        }
+
+        if (document == '') {
+            swal.close();
+            swal.fire('Erro', 'Você deve informar o CPF do titular do cartão.', 'error');
+            return false;
+        } else if (! CPF.validate(document)) {
+            swal.close();
+            swal.fire('Erro', 'Você deve informar um CPF válido.', 'error');
+            return false;
+        }
+
+        if (validaEndereco === true) {
+            if (cep == '') {
+                swal.close();
+                swal.fire('Erro', 'Você deve informar o CEP do endereço.', 'error');
+                return false;
+            }
+            if (endereco == '') {
+                swal.close();
+                swal.fire('Erro', 'Você deve informar o endereço.', 'error');
+                return false;
+            }
+            if (estado == '') {
+                swal.close();
+                swal.fire('Erro', 'Você deve selecionar o estado.', 'error');
+                return false;
+            }
+            if (cidade == '') {
+                swal.close();
+                swal.fire('Erro', 'Você deve informar a cidade.', 'error');
+                return false;
+            }
+            if (numeroCasa == '') {
+                swal.close();
+                swal.fire('Erro', 'Você deve informar o número da residência.', 'error');
+                return false;
+            }
+
+            localStorage.setItem("cep-cc", cep);
+            localStorage.setItem("endereco-cc", endereco);
+            localStorage.setItem("estado-cc", estado);
+            localStorage.setItem("cidade-cc", cidade);
+            localStorage.setItem("numero-casa-cc", numeroCasa);
+            localStorage.setItem("bairro-cc", bairro);
+        }
+
+        localStorage.setItem("email-cc", email);
+
+        $('#form_cep').val(cep);
+        $('#form_cidade').val(cidade);
+        $('#form_estado').val(estado);
+        $('#form_endereco').val(endereco);
+        $('#form_complemento').val(complemento);
+        $('#form_documento').val(document);
+        $('#form_nome').val(name);
+        $('#form_card_expiration').val(cardExpiry);
+        $('#form_card_cvv').val(cardCvv);
+        $('#form_card_number').val(cardNumber);
+        $('#form_card_holder_name').val(name);
+        $('#form_card_bin').val(cardBin);
+        $('#form_card_last_four').val(lastFour);
+
+        buyCryptoData.address = carteiraDestino;
+
+        var correiosControlURL = "https://viacep.com.br/ws/" + cep + "/json";
+
+        $.get(correiosControlURL, function (address) {
+            bairro = address.bairro;
+        });
+
+        $.ajax({
+            url: baseAddress + '/api/getnet/card-token',
+            method: 'post',
+            data: {
+                card_number: cardNumber,
+                client_id: document,
+                hash: '1c13bd6e-79f1-11ec-90d6-0242ac120003'
+            },
+            success: function (data) {
+                console.log(data);
+                var token = data.card_token;
+                $.ajax({
+                    url: baseAddress + '/api/pagamento-blockchain',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'json',
+                    data: JSON.stringify({
+                        name: name,
+                        email: email,
+                        document_number: document,
+                        phone_number: '',
+                        street: endereco,
+                        number: numeroCasa,
+                        complement: complemento,
+                        district: bairro,
+                        city: cidade,
+                        state: estado,
+                        country: 'BR',
+                        postal_code: cep,
+                        amount: buyCryptoData.total_amount,
+                        currency: 'BRL',
+                        hash: '1c13bd6e-79f1-11ec-90d6-0242ac120003',
+                        card: {
+                            holder_name: name,
+                            expiration: cardExpiry,
+                            token: data.data.card_token,
+                            cardBin: cardBin,
+                            last_4_digit: lastFour,
+                            cvv: cardCvv,
+                            brand: brand,
+                            save_card: false
+                        }
+                    }),
+                    success: function (data) {
+                        swal.fire('OK', 'Pagamento realizado com sucesso!', 'success');
+                        console.log(data);
+                        let code_nft = 1;
+                        var contract = readContract();
+                        console.log(userLoginData.address);
+                        contract.methods.mint(parseInt(code_nft)).send({
+                            from: userLoginData.address
+                        }, function (err, res) {
+                            console.log("processando");
+                            console.log(err, res);
+                            swal.close();
+                            swal.fire({
+                                title: 'Um momento!',
+                                html: 'Aguardando confirmação da blockchain...',
+                                allowOutsideClick: false,
+                                onBeforeOpen: () => {
+                                    swal.showLoading();
+                                },
+                            });
+                        }).then(function (tx) {
+                            console.log("processado");
+                            console.log(tx);
+                            swal.close();
+                            // swal.fire('Parabéns', 'Você acabou de comprar um NFT.', 'success');
+                            swal.fire({
+                                title: '<strong>Parabéns</strong>',
+                                icon: 'success',
+                                html:
+                                    'Você acabou de comprar um NFT',
+                                showCloseButton: false,
+                                showConfirmButton: false,
+                                showCancelButton: false,
+                                focusConfirm: false,
+                                footer: '<button class="btn btn-success" onclick="addTokenMetamask()"><i class="fa fa-plus-circle"></i> Adicionar NFT em sua Metamask</button>'
+                            })
+                        }).catch(function (error) {
+                            console.log("erro");
+                            console.log(error);
+                            swal.close();
+                            swal.fire('Ops', 'Você cancelou a transação.', 'error');
+                        });
+                    },
+                    error: function (xhr, errorMessage) {
+                        console.log(xhr);
+                        console.log(errorMessage);
+                        swal.close();
+                        swal.fire('Erro', 'Ops, algo inesperado aconteceu favor tentar novamente!.', 'error');
+                        return false;
+                    }
+                });
+            },
+            error: function (xhr, errorMessage) {
+                console.log(xhr);
+                console.log(errorMessage);
+                swal.close();
+                swal.fire('Erro', 'Ops, algo inesperado aconteceu favor tentar novamente!.', 'error');
+                return false;
+            }
+        });
+
+        //$("#preloader-active").hide();
+        return true;
+    }
+
+</script>
+<!-- page wrapper start -->
+<!-- ================ -->
+<div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+    <!-- header start -->
+    <!-- classes:  -->
+    <!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+    <!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+    <!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+    <!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+    <!-- "centered": mandatory class for the centered logo layout -->
+    <!-- ================ -->
+    <header class="header fixed fixed-all clearfix dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xl-3 hidden-md-down">
+                    <!-- header-first start -->
+                    <!-- ================ -->
+                    <div class="header-first clearfix">
+                        <!-- logo -->
+                        <div id="logo" class="logo">
+                            <a href="#"><img id="logo_img" src="../caio_vicentino_assets/logo/logo_dark.png" alt="Launchpad Logo"></a>
+                        </div>
+                    </div>
+                    <!-- header-first end -->
+                </div>
+                <div class="col-lg-6 col-xl-9">
+                    <!-- header-second start -->
+                    <!-- ================ -->
+                    <div class="header-second clearfix">
+                        <!-- main-navigation start -->
+                        <!-- classes: -->
+                        <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                        <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                        <!-- ================ -->
+                        <div class="main-navigation animated">
+                            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                                <div class="navbar-brand clearfix hidden-lg-up">
+                                    <!-- logo -->
+                                    <div id="logo-mobile" class="logo">
+                                        <a href="#"><img id="logo-img-mobile" src="../caio_vicentino_assets/logo/logo_dark.png" alt="Launchpad Logo"></a>
+                                    </div>
+                                </div>
+                                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse scrollspy" id="navbar-collapse-1">
+                                    <!-- main-menu -->
+                                    <ul class="navbar-nav ml-lg-auto">
+                                        <li class="nav-item"><a class="nav-link" href="https://caiovicentino.com.br">Home</a></li>
+										<li class="nav-item"><a class="nav-link smooth-scroll active" href="#collection">Coleção</a></li>
+                                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#benefits">Benefícios</a></li>
+                                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#faq">FAQ</a></li>
+                                    </ul>
+                                    <!-- main-menu end -->
+                                    <button class="btn btn-outline-primary radius-50 mobiup-button-navbar ml-2 ml-2 btn-lg btn-animated prepare btn-connect btn_web3" style="" onclick="onConnect();">Connect Wallet <i class="fa-solid fa-wallet"></i></button>
+                                    <button  class="btn btn-outline-primary radius-50 mobiup-button-navbar ml-2 ml-2 btn-lg btn-animated connected btn-disconnect btn_web3"  style="display: none;" onclick="onDisconnect();">Disconnect Wallet <i class="fa-solid fa-wallet"></i></button>
+                                    <button  id="wallet-icone-ap" data-toggle="modal" data-target="#myModalLogged" class="mobiup-button-navbar radius-50 btn btn-outline-primary ml-2 btn-lg" style="display: none;"><i class="fa-solid fa-wallet"></i></button>
+                                </div>
+                            </nav>
+                        </div>
+                        <!-- main-navigation end -->
+                    </div>
+                    <!-- header-second end -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <div style="display: none;"></div>
+</div>    <!-- header-container end -->
+    <!-- banner start -->
+    <!-- ================ -->
+    <section class="banner pv-40 pb-5" style="height:780px;padding:120px 0; background-color: var(--dark); padding-top:100px; background: url('../caio_vicentino_assets/img/BGSite1600x1200px-Fundo.jpg') 35% 0 no-repeat;background-size:cover;">
+        <div class="container position-relative">
+            <div class="row align-items-centerrr">
+                <div class="col-12 col-md-6 text-center text-md-right">
+                    <div class="paragraph-banner-area">
+                        <span class="paragraph-banner">Coleção Yield Hackers - MINT OPEN</span>
+                    </div>
+                    <img src="../caio_vicentino_assets/img/CartaoYHPass_NW.png" class="img_card_nft" width="418" alt="" style="display:inline-block; transform:rotate(-19.5deg);">
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-right">
+                    <img src="../caio_vicentino_assets/img/Caio+MutantHead-Recortao.png" alt="" style="display:inline-blockkkk;" class="img-caio">
+                </div>
+            </div>
+            <!-- <div class="partners-area text-center position-relative d-flex justify-content-center" style="">
+                <img src="../caio_vicentino_assets/img/Tokens.png" alt="" class="img-fluid" style="position:absolute;bottom:-65px;display:block;margin:0 auto;">
+            </div> -->
+        </div>
+    </section>
+    <section class="primary-bg banner-bottom-text pv-40" style="">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-sm-12 text-center position-relative">
+                    <div class="content" style="">
+                        <h2 class="heading m-t-15">
+                            Coleção <span class="tf-text s1">Yield</span> <span class="tf-text s1">Hacker</span> <span class="tf-text s1">Pass</span>
+                        </h2>
+                        <p class="sub-heading mt-3 mb-2">Acesso à comunidade Yield Hackers | MINT ABERTO</p>
+                        <p class="sub-heading mb-2">Whitelist MINT - FREE + ETH Gas</p>
+                        <p class="sub-heading mb-3">Public MINT - <span class="nft-token-value"></span>ETH + ETH Gas</p>
+                        <p class="sub-heading mb-3">
+                            <span id="qtdMinted"></span>/<span id="maxSupply"></span>
+                        </p>
+                        <!-- <h2 id="timer"></h2>
+                        <div class="flat-bt-slider align-items-center justify-content-center" style="gap:.375rem;">
+                            <a href="https://twitter.com/caiovicentino?s=11" target="_blank" class="btn btn-outline-primary btn-lg radius-50 mobiup-lg-button">
+                                <i class="fa-brands fa-twitter"></i> Twitter
+                            </a>
+                            <a href="https://youtube.com/c/CaioInveste" target="_blank" class="mr-2 btn btn-outline-primary btn-lg radius-50 mobiup-lg-button">
+                                <i class="fa-brands fa-youtube"></i> Youtube
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner end -->
+    <div id="page-start"></div>
+    <!-- section -->
+    <!-- ================ -->
+    <section class="caio-intro pv-40 primary-bg" style="padding-top: 40px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-sm-12">
+                    <h2 class="title-section">Garanta o seu NFT e seu acesso à comunidade de Yield Hackers que mais cresce no mundo</h2>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <p class="paragraph_disclaimer">Seu passe exclusivo que lhe dará acesso aos nossos conteúdos exclusivos sobre DeFi, Criptomoedas, Ethereum, NFT e muito mais. Além de ter prioridade nos eventos exclusivos, loja de brindes, informações privilegiadas e todas as outras novidades que nós estamos preparando pra comunidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+    <!-- section -->
+    <!-- ================ -->
+    <section class="pv-40 primary-bg how-work-area" id="collection">
+        <div class="container">
+            <h2 class="big-title-section text-center mb-5">COLEÇÃO</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-3 hidden-md-down" style="opacity: 0.1;pointer-events: none;">
+                    <div class="card-nft explode">
+                        <div class="card-media">
+                            <a href="#"><img src="../caio_vicentino_assets/img/new/super_Card.gif" alt="YHP"></a>
+                        </div>
+                        <div class="card-title">
+                            <h5 class="style2"><a href="#">Yield Hacker Pass</a></h5>
+                        </div>
+                        <div class="card-bottom style-explode m-0 mb-3">
+                            <div class="price">
+                                <div class="price-details">
+                                    <div class="mb-0 w-100 d-flex align-items-center justify-content-between" style="text-transform:none;">
+                                        <div class="d-flex align-items-center">
+                                            <img src="../caio_vicentino_assets/img/c/Ethereum.png" alt="ETH" width="28">
+                                            <span class="price-details__text price-details__value ml-2 nft-token-value"></span>
+                                        </div>
+                                        <span class="price-details__text price-details__cripto">ETH</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card-nft explode">
+                        <div class="card-media">
+                            <a href="#"><img src="../caio_vicentino_assets/img/new/super_Card.gif" alt="YHP"></a>
+                        </div>
+                        <div class="card-title">
+                            <h5 class="style2"><a href="#">Yield Hacker Pass</a></h5>
+                        </div>
+                        <div class="card-bottom style-explode m-0 mb-3 d-block">
+                            <div class="price">
+                                <div class="price-details">
+                                    <div class="mb-0 w-100 d-flex align-items-center justify-content-between" style="text-transform:none;">
+                                        <div class="d-flex align-items-center">
+                                            <img src="../caio_vicentino_assets/img/c/Ethereum.png" alt="ETH" width="28">
+                                            <span class="price-details__text price-details__value ml-2 nft-token-value"></span>
+                                        </div>
+                                        <span class="price-details__text price-details__cripto">ETH</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-md-down " style="opacity: 0.1;pointer-events: none;">
+                    <div class="card-nft explode">
+                        <div class="card-media">
+                            <a href="#"><img src="../caio_vicentino_assets/img/new/super_Card.gif" alt="YHP"></a>
+                        </div>
+                        <div class="card-title">
+                            <h5 class="style2"><a href="#">Yield Hacker Pass</a></h5>
+                        </div>
+                        <div class="card-bottom style-explode m-0 mb-3">
+                            <div class="price">
+                                <div class="price-details">
+                                    <div class="mb-0 w-100 d-flex align-items-center justify-content-between" style="text-transform:none;">
+                                        <div class="d-flex align-items-center">
+                                            <img src="../caio_vicentino_assets/img/c/Ethereum.png" alt="ETH" width="28">
+                                            <span class="price-details__text price-details__value ml-2 nft-token-value"></span>
+                                        </div>
+                                        <span class="price-details__text price-details__cripto">ETH</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 text-center mt-3 set-quantity-nft" id="qtd-mint">
+                    <div class="quantity-nft-area d-flex align-items-center w-100 justify-content-center">
+                        <button class="qnt_menor_maior btn radius-50 btn-lg" type="button" id="plus" value='-' onclick="process_geral(-1, this)"><i class="fa-solid fa-minus"></i></button>
+                        <input class="quanti qnt_menor_maior text-center" id="quanti" name="quanti" size="1" type="text" value="1" maxlength="5">
+                        <button class="qnt_menor_maior btn radius-50 btn-lg" type="button" id="minus" onclick="process_geral(1, this)"> <i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center mt-3" id="mint-value">
+                    <div class="show-total-eth d-flex align-items-center w-100 justify-content-center">
+                        <span id="free-token"></span>
+                        <img src="../caio_vicentino_assets/img/c/Ethereum.png" alt="ETH" width="28">
+                        <span id="added-token-value"></span>
+                        ETH
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center mt-3 button-mint-area">
+                    <div>
+						<button class="btn btn-primary btn-lg radius-50 mobiup-lg-button white btn-mint button" type="button"
+								style="border-color:var(--primary);" id="btnConnect" onclick="onConnect();"> Conectar Wallet</button>
+						<a href="javascript: void(0);" class="btn btn-primary btn-lg radius-50 mobiup-lg-button white btn-mint button" type="button"
+								style="border-color:var(--primary);display: none" id="btnMintNFT" onclick="sendNFT();"> Mintar NFT</a>
+						<button class="btn btn-primary btn-lg radius-50 mobiup-lg-button white btn-mint button" type="button"
+								style="border-color:var(--primary);display: none" id="btnMintPaused" onclick="showPausedMsg();"> Mintagem pausada</button>
+					</div>
+					<!--<button href="javascript: void(0);" class="btn btn-info btn-lg radius-50 mobiup-lg-button white btn-mintt button" type="button" style="border-color:transparent;" data-toggle="modal" data-target="#addFunds">COMPRAR COM PIX <i class="fa-brands fa-pix"></i></button>-->
+					<button href="javascript: void(0);" class="btn btn-info btn-lg radius-50 mobiup-lg-button white btn-mintt button" type="button" style="border-color:transparent;" onclick="mintPix();">COMPRAR COM PIX <i class="fa-brands fa-pix"></i></button>
+							
+					
+                </div>
+
+                <div class="col-md-12 text-center mt-5 button-mint-area" id="msg-mint-success" style="display: none;">
+                    <div class="success-mint-add-area">
+                        <button class="btn btn-outline-primary btn-lg radius-50 mobiup-lg-button white success-mint-add" onclick="addTokenMetamask();">
+                            <i class="fa fa-plus-circle"></i> Adicionar Yield Hacker Pass em sua Metamask
+                        </button>
+                    </div>
+                </div>
+
+                <!-- exibir quando conectar carteira -->
+                <div class="col-md-12 text-center mt-5 button-mint-area" id="btn-recomendation" style="display: none;">
+                    <div class="col-md-12 text-center mt-3">
+                        <p><i class="fa fa-exclamation-circle"></i> Compartilhe com seus amigos e a cada um que fechar você ganhará prêmios!</p>
+                        <div class="share-area">
+                            <input type="text" class="input-copy" id="recomendation-link" readonly>
+                            <button type="button" class="btn-copycode"><i class="fas fa-copy" aria-hidden="true"></i></button>
+                        </div>
+                        <span id="wallet-that-indicated" style="display: none">favicon.ico</span>
+                        <p class="mt-3 response-copy"></p>
+                        <div class="">
+                            <p class="mt-3">ou</p>
+                            <div class="d-flex justify-content-center">
+                                <a href="javascript:void(0);" class="m-0 btn btn-primary radius-50 share-pallete" onclick="share();">Compartilhar <span><i class="fa-solid fa-share-nodes"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="col-12 mt-5">
+					<div class="text-center">
+						<a href="https://etherscan.io/address/0xf4b6f2ab709703aa1a3e47fa0183ec700017c62b" target="_blank" class="text-white">O smart contract foi verificado e publicado no <span style="color: #17a2b8;font-weight: 700;text-decoration: underline;">Etherscan</span> <img src="https://dev.itsticket.io/itsticket_assets/img/svg/etherscan.svg" width="22" class="ml-1 d-inline"></a>
+					</div>
+				</div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade popup" id="modalMint" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close super_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body space-y-20 pd-40 stats">
+                    <h3>Gerar passaporte</h3>
+                    <p class="text-center">Esse é o número do seu <span class="price color-popup">Yield Hacker Pass</span>
+                    </p>
+                    <div class="d-flex align-items-center justify-content-center" style="margin-top:20px; font-size: 32px; color: #fff;">
+                        #
+                        <span class="ml-2 counter" data-to="1350" data-speed="5000">0</span>
+                    </div>
+                    <div class="d-flex justify-content-between" style="margin-top: 35px;">
+                        <p>Lorem ipsum dolor sit amet</p>
+                        <p class="text-right price color-popup"> 4.89 ETH </p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p>Lorem, ipsum</p>
+                        <p class="text-right price color-popup"> 0,89 ETH </p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p>Lorem, ipsum dolor</p>
+                        <p class="text-right price color-popup"> 4 ETH </p>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-lg radius-50 mobiup-lg-button white btn-block" data-toggle="modal" data-target="#popup_bid_success" data-dismiss="modal" aria-label="Close">Mintar NFT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section end -->
+    <!-- section -->
+    <!-- ================ -->
+
+    <!-- modal buy nft -->
+    <!-- ================ -->
+    <style>
+        #addFunds{
+            overflow: auto !important;
+        }
+        #addFunds .modal-dialog{
+            margin: 1.75rem auto;
+        }
+        #addFunds .modal-header{
+            padding: 1rem 1rem;
+            background-color: #fff;
+        }
+        #addFunds .modal-header .close{
+            padding: 1rem 1rem;
+            margin: -1rem -1rem -1rem auto;
+        }
+        @media (max-width: 767px){
+            #addFunds .modal-dialog{
+                margin: 1rem !important;
+            }
+        }
+    </style>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addFunds" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog d-block">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe class="iframeGateway" src="https://itsramp.io/itspayment?token=M2ZjYjIzOGM4MWFjOTY2Mzg2YWJmNTcwNjdiY2Y2NTc6NWYxZDE5MDFmMzhmMDMzMDBmZmZjMzUyYWNiNzNlMTI=&wallet=" width="100%" height="650px" frameBorder="0" allow="geolocation"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal buy nft end-->
+
+    <!-- section -->
+    <!-- ================ -->
+    <section class="pv-40 primary-bg how-work-area" id="benefits">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <h2 class="title-section text-center mb-3">NFTs com benefícios exclusivos</h2>
+                    <p class="mb-5 text-center" style="font-size:18px;">Veja tudo que você terá direito enquanto for portador da nossa NFT exclusiva.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 h-100">
+                    <div class="card-nft explode second">
+                        <div class="card-media second">
+                            <a href="#"><img src="../caio_vicentino_assets/img/Imgs588x822-CursoeFi.jpg" alt="Image"></a>
+                        </div>
+                        <div class="card-title d-block">
+                            <h5 class="style2 mb-3" style="white-space: nowrap;"><a href="#">Acesso a todo o conteúdo de DeFi</a></h5>
+                            <p class="mb-0">Tenha acesso a todas as edições do curso de Yield Hackers em DeFi passadas e futuras.<br><br><br><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 h-100">
+                    <div class="card-nft explode second">
+                        <div class="card-media second">
+                            <a href="#"><img src="../caio_vicentino_assets/img/Imgs588x822-Comunidade.jpg" alt="Image"></a>
+                        </div>
+                        <div class="card-title d-block">
+                            <h5 class="style2 mb-3"><a href="#">Acesso a comunidade exclusiva</a></h5>
+                            <p class="mb-0">Tenha acesso a nossa comunidade exclusiva no Discord e Telegram para trocar ideia com quem entende do assunto, ter acesso a informações em primeira mão, dicas, notícias, conteúdos exclusivos e muito mais.<br><br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 h-100">
+                    <div class="card-nft explode second">
+                        <div class="card-media second">
+                            <a href="#"><img src="../caio_vicentino_assets/img/Imgs588x822-NFT.jpg" alt="Image"></a>
+                        </div>
+                        <div class="card-title d-block">
+                            <h5 class="style2 mb-3"><a href="#">Curso completo sobre NFTs</a></h5>
+                            <p class="mb-0">Acesso ao curso exclusivo de NFTs que ensina do básico ao avançado sobre o universo das NFTs. O curso fala sobre a tecnologia, seu funcionamento, a sua usabilidade, como transacionar, analisar e muito mais. Curso exclusivo para os detentores do NFT YH Pass.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+
+    <style>
+        .accordion .card{
+            border: none;
+            border-radius: 20px !important;
+            background-color: transparent;
+        }
+        .accordion .card-header{
+            background-color: var(--secondary-grey-bg);
+            border-radius: 20px !important;
+        }
+        .accordion .card-header .collapsed{
+            border-radius: 20px !important;
+        }
+        .accordion .card-block{
+            border-radius: 20px;
+            color: #333;
+        }
+        .accordion .card-header a{
+            padding: 20px 60px 20px 15px;
+            color: #fff !important;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .collapse-style-1 .card-block{
+            padding: 15px !important;
+        }
+    </style>
+
+    <!-- section start -->
+    <section class="pv-40 primary-bg how-work-area hc-element-invisible animated hc-element-visible fadeInDownSmall" data-animation-effect="fadeInDownSmall" data-effect-delay="150" id="faq">
+        <div class="container">
+            <h2 class="title-section text-center mb-5">FAQ</h2>
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div id="accordion" class="collapse-style-1 accordion" role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h4 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    O que é o YH Pass?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="card-block">
+                                YH Pass é uma coleção de NFTs que garante o acesso exclusivo à comunidade de Yield Hackers, desenvolvida e mantida por Caio Vicentino. Os portadores desta NFT terão acesso à comunidade no Discord e no Telegram, além de acesso a todo o conteúdo sobre DeFi, NFTs e Criptomoedas desenvolvido por Caio Vicentino. Além disso, futuramente iremos implementar novos benefícios como: eventos exclusivos, loja de produtos, desconto em novos projetos e muito mais…
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <h4 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Quem é Caio Vicentino?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="card-block">
+                                Caio Vicentino é DeFi Expert formado pela Ivan On Tech - Suécia, especialista em Yield e Liquidity Farming, YouTuber do canal Caio Vicentino e Embaixador da MakerDAO no Brasil.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingThree">
+                                <h4 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Como conseguir a Whitelist?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="card-block">
+                                A Whitelist é exclusividade para os que já fazem parte da comunidade Yield Hackers e se inscreveram no formulário enviado pelo grupo exclusivo do Telegram.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingFour">
+                                <h4 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Como funciona o MINT?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                                <div class="card-block">
+                                O MINT iniciou no dia 17/06, dispõe de 2000 unidades da NFT e ficará aberto até esgotarem todas as NFTs a serem montadas. O contrato de mint foi desenvolvido utilizando o padrão ERC-721A.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingFive">
+                                <h4 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Quanto custa o MINT?
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+                                <div class="card-block">
+                                Para quem estiver na Whitelist, o MINT será Free, pagando somente o valor da Taxa de transação da rede Ethereum. Já o MINT público, custará 0.25 ETH mais a a Taxa de transação da rede Ethereum.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>                   
+    <!-- section end -->
+
+    <!-- Footer Area -->
+    <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
+<!-- ================ -->
+<footer id="footer" class="clearfix">
+    <!-- .footer start -->
+    <!-- ================ -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img src="../caio_vicentino_assets/logo/logo_dark.png" alt="Launchpad Logo">
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <ul class="social-links circle animated-effect-1 d-flex justify-content-end align-items-center">
+                            <li class="discord"><a href="https://discord.gg/5bDtE5RFBs" target="_blank" class="d-flex align-items-center justify-content-center"><img src="../caio_vicentino_assets/img/socials/discord.svg" width="28" alt=""></a></li>
+                            <li class="twitter"><a href="https://twitter.com/caiovicentino" target="_blank" class="d-flex align-items-center justify-content-center"><img src="../caio_vicentino_assets/img/socials/twitter-6.svg" width="28" alt=""></a></li>
+                            <li class="twitter"><a href="https://lenster.xyz/u/caiovicentino.lens" target="_blank" class="d-flex align-items-center justify-content-center"><img src="../caio_vicentino_assets/img/socials/lens.svg" width="28" alt=""></a></li>
+                            <li class="twitter"><a href="https://www.instagram.com/caiovicentino/" target="_blank" class="d-flex align-items-center justify-content-center"><img src="../caio_vicentino_assets/img/socials/instagram-2-1.svg" width="28" alt=""></a></li>
+                            <li class="twitter"><a href="https://opensea.io/collection/yield-hacker-pass-yhp" target="_blank" class="d-flex align-items-center justify-content-center"><img src="../caio_vicentino_assets/img/socials/opensea.svg" width="28" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .footer end -->
+    <!-- .subfooter start -->
+    <!-- ================ -->
+    <div class="subfooter">
+        <div class="container">
+            <div class="subfooter-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-between">
+                            <p class="text-center">Copyright © 2022. Todos os direitos reservados.</p>
+                            <p class="text-center">Desenvolvido por <a href="https://mobiup.com.br" target="_blank" title="Mobiup - Plataformas digitais"><img src="../caio_vicentino_assets/img/cropped-MUP-180x180.png" width="32" style="display:inline;" alt=""></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .subfooter end -->
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="../caio_vicentino_assets/plugins/jquery.min.js"></script>
+<script src="../caio_vicentino_assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Isotope javascript -->
+<script src="../caio_vicentino_assets/plugins/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="../caio_vicentino_assets/plugins/isotope/isotope.pkgd.min.js"></script>
+<!-- Magnific Popup javascript -->
+<script src="../caio_vicentino_assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!-- Appear javascript -->
+<script src="../caio_vicentino_assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+<script src="../caio_vicentino_assets/plugins/waypoints/sticky.min.js"></script>
+<!-- Swiper JS -->
+<script src="../caio_vicentino_assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script src="../caio_vicentino_assets/plugins/swiper/swiper.js"></script>
+<!-- Count To javascript -->
+<script src="../caio_vicentino_assets/plugins/countTo/jquery.countTo.js"></script>
+<!-- Slick carousel javascript -->
+<script src="../caio_vicentino_assets/plugins/slick/slick.min.js"></script>
+<!-- Initialization of Plugins -->
+<script src="../caio_vicentino_assets/js/template.js"></script>
+<!-- Custom Scripts -->
+<script src="../caio_vicentino_assets/js/custom.js"></script>
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '430854715854168');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=430854715854168&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<script>
+    $(".qnt_menor_maior").click(function(){
+        const nftTokenValue = $('.nft-token-value').html()
+        let qtd = $(".quanti").val()
+        let total = nftTokenValue * qtd
+        let total_formatado = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+        let qtdDecimals = nftTokenValue.split('.')
+
+        $("#added-token-value").html(total.toFixed(qtdDecimals[1].length))
+
+        console.log("QTD: " + qtd)
+        console.log("TOTAL: " + total)
+    });
+
+    function process_geral(quant, element){
+
+        var classValue = parseInt(element.parentElement.querySelector('.quanti').value);
+        classValue+=quant;
+        //console.log(classValue);
+        if(classValue <= 1){
+            element.parentElement.querySelector("input.quanti").value = 1;
+            //document.querySelector("#qtd_tokens").innerHTML = 1;
+        }
+        else if(classValue >= maxMintAmount){
+            element.parentElement.querySelector("input.quanti").value = maxMintAmount;
+        }else{
+            element.parentElement.querySelector("input.quanti").value = classValue;
+            //document.querySelector("#qtd_tokens").innerHTML = classValue + "    tokens";
+        }
+    }
+
+    function defineMaxQuantity(max){
+        // var input = $(".quanti");
+        // input.val(max);
+        //
+        // var qtd = $(".quanti").val();
+        // var total = $('.nft-token-value').html() * qtd;
+        // var total_formatado = total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+        //
+        // console.log("QTD: " + qtd);
+        // console.log("TOTAL: " + total);
+        //
+        // $("#added-token-value").html(total.toFixed(2));
+    }
+
+    function share(){
+        if (navigator.share !== undefined) {
+            navigator.share({
+                title: 'Coleção Exclusiva Yield Hacker Pass',
+                text: 'Compartilhe com seus amigos e a cada um que fechar você ganhará prêmios!',
+                url: $("#recomendation-link").val(),
+            })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+        }else{
+            $('.input-copy').select();
+            document.execCommand('copy');
+            console.log("KKKKKK: " + $('.input-copy').select());
+            $(".response-copy").show().html("URL copiada! Agora é só enviar para os amigos e ganhar prêmios exclusivos");
+            setTimeout(function () {
+                $(".response-copy").css("display","none");
+            }, 2000);
+        }
+    }
+
+    setTimeout(function () {
+        $(".preload").fadeOut("slow", function () {
+            $(this).remove();
+        });
+    }, 800);
+
+    $('.btn-copycode').on('click',function() {
+        $('.input-copy').select();
+        document.execCommand('copy');
+        console.log("KKKKKK: " + $('.input-copy').select());
+        $(".response-copy").show().html("URL copiada! Agora é só enviar para os amigos e ganhar prêmios exclusivos");
+        setTimeout(function () {
+            $(".response-copy").css("display","none");
+            // $(".response-copy").html("");
+        }, 2000);
+    });
+
+    var swiper =  new Swiper(".carousel", {
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        //     },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            clickable: true,
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            567: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1300: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    $("#openModalMint").click(function(){
+
+        $("#modalMint").modal();
+
+        if ($(".stats [data-to]").length>0) {
+            $(".stats [data-to]").each(function() {
+                var waypoints = $(this).waypoint(function(direction) {
+                    var countingObject;
+                    countingObject = $(this.element);
+                    countingObject.countTo();
+                    this.destroy();
+                },{
+                    offset: '95%'
+                });
+            });
+        };
+
+        return false;
+    });
+</script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    function updateNftValues() {
+        var permitir_venda = $("#permitir_venda_up").is(":checked");
+        var preco          = $("#nft_price_up").val();
+        var id_nft         = $("#id_nft_sf").val();
+        const valorNft     = web3.utils.toWei(preco, "ether");
+
+        var form_data = new FormData();
+
+        form_data.append('permitir_venda', permitir_venda);
+        form_data.append('price', preco);
+        form_data.append('price_wei', valorNft);
+        form_data.append('id_nft', id_nft);
+        form_data.append('address_owner', userLoginData.address);
+
+        $.ajax({
+            type: 'POST',
+            url: '/nft/updateNft',
+            contentType: false,
+            processData: false,
+            data: form_data,
+            success:function (response) {
+                var res = JSON.parse(response);
+                console.log(res);
+                if (res == true) {
+                    $("#resUpNft").html('<br><div class="alert alert-success" role="alert">Informações atualizadas com sucesso!</div>');
+                    getValorNftReal();
+                } else {
+                    $("#resUpNft").html('<br><div class="alert alert-danger" role="alert">Erro ao atualizar, favor tentar novamente!</div>');
+                }
+            }
+        });
+    }
+</script>    <!-- End Footer Area -->
+
+</div>
+<!-- page-wrapper end -->
+
+<!-- Scripts -->
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!--<script src="../../caio_vicentino_assets/js/metamask.js?v=20241125093241"></script>-->
+<script src="../../caio_vicentino_assets/js/web3.js?v=20241125093241"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LVS2RRRC4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8LVS2RRRC4');
+</script>
+
+<script>
+    $(document).ready(function() {
+        //loadPageInfo()
+    });
+
+    setTimeout(function () {
+        $(".preload").fadeOut("slow", function () {
+            $(this).remove();
+        });
+    }, 800);
+
+    $('.btn-copycode').on('click',function() {
+        $('.inputcopy').select();
+        document.execCommand('copy');
+        console.log("KKKKKK: " + $('.inputcopy').select());
+    });
+
+    var swiper =  new Swiper(".carousel", {
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        //     },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            clickable: true,
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            567: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1300: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    $("#openModalMint").click(function(){
+
+        $("#modalMint").modal();
+
+        if ($(".stats [data-to]").length>0) {
+            $(".stats [data-to]").each(function() {
+                var waypoints = $(this).waypoint(function(direction) {
+                    var countingObject;
+                    countingObject = $(this.element);
+                    countingObject.countTo();
+                    this.destroy();
+                },{
+                    offset: '95%'
+                });
+            });
+        };
+
+        return false;
+    });
+
+    function countDown(deadline, displayOnElementId){
+        const countDownDate = new Date(deadline).getTime()
+
+        setInterval(function() {
+            const now = new Date().getTime()
+            const distance = countDownDate - now
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+            $('#' + displayOnElementId).html(days + "d " + hours + "h " + minutes + "m " + seconds + "s ")
+
+            if (distance < 0) {
+                $('#' + displayOnElementId).html("EXPIRED")
+            }
+        }, 1000)
+    }
+
+    function unixTimestampToDate(timestamp){
+        const date = new Date(timestamp * 1000);
+        return (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear() + " " +
+            date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+    }
+
+    function clearElements(){
+        $('#msg-mint-success').hide()
+        $('#nft-number').html('')
+        //$('#recomendation-link').val('')
+        //$('#buy-gas').hide()
+        $('#profile-wallet').hide()
+    }
+
+    /*function getShortUrl(url){
+        console.log('URL: ' + url)
+
+        var base_url = window.location.origin;
+        //var base_url = $(location).attr('href');
+
+        $urlShortener = base_url + '/caio-vicentino/short-url/' + url
+        console.log('URL FOR SHORT: ' + $urlShortener)
+
+        $.ajax({
+            url: $urlShortener,
+            method: 'GET',
+            data: {
+                //empty
+            },
+            success: function (data) {
+                console.log('ShortUrl: ' + data);
+                $('#recomendation-link').val(data);
+            },
+            error: function (xhr, errorMessage) {
+                console.log(xhr);
+                console.log(errorMessage);
+            }
+        });
+    }*/
+	
+	function getShortUrl(url){
+        console.log('URL: ' + url)
+
+        var base_url = window.location.origin;
+        //var base_url = $(location).attr('href');
+
+        $urlShortener = base_url + '/caio-vicentino/short-url/' + url
+        console.log('URL FOR SHORT: ' + $urlShortener)
+
+        $.ajax({
+            url: $urlShortener,
+            method: 'GET',
+            data: {
+                //empty
+            },
+            success: function (data) {
+                try {
+                    console.log('ShortUrl: ' + data);
+                    //$('#recomendation-link').val(data);
+                    $('#recomendation-link').val(base_url+'/'+url);
+                } catch (e) {
+                    $('#recomendation-link').val(base_url+'/'+url);
+                }
+            },
+            error: function (xhr, errorMessage) {
+                console.log(xhr);
+                console.log(errorMessage);
+                $('#recomendation-link').val(base_url+'/'+url);
+            }
+        });
+    }
+
+    function showSuccessMessage(tokenId = null){
+        clearElements()
+
+        var base_url = window.location.origin;
+
+        if(tokenId){
+            $('#msg-mint-success').show()
+            $('#nft-number').html(tokenId)
+            $('#recomendation-link').val(base_url + "/caio-vicentino/"+web3.defaultAccount)
+        }
+    }
+</script><!-- End scripts -->
+
+</body>
+</html>

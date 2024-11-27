@@ -1,0 +1,13 @@
+.title-area h2{
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.title-area p{
+    color: var(--white);
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+}

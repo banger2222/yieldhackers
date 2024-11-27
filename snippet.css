@@ -1,0 +1,15 @@
+@import url("css2-4.css");
+
+body{
+    font-family: 'Inter', sans-serif !important;
+}
+
+.btn-primary:hover{
+    background-color: var(--dark) !important;
+    color: #fff !important;
+}
+
+.iframe-itspay :is(h6){
+    color: #000 !important;
+    font-family: 'Inter', sans-serif;
+}
